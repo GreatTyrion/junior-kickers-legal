@@ -1,0 +1,740 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Privacy Policy for Junior Kickers Journey - Learn how we protect your privacy with our offline-first, zero data collection approach.">
+    <title>Privacy Policy - Junior Kickers Journey</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+            line-height: 1.6;
+            color: #1f2937;
+            background: #f9fafb;
+        }
+        
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 20px;
+            background: white;
+            min-height: 100vh;
+        }
+        
+        header {
+            background: linear-gradient(135deg, #22c55e 0%, #16a34a 100%);
+            color: white;
+            padding: 40px 20px;
+            margin: -20px -20px 40px -20px;
+            border-radius: 0 0 16px 16px;
+        }
+        
+        header h1 {
+            font-size: 2em;
+            margin-bottom: 10px;
+        }
+        
+        .meta-info {
+            font-size: 0.9em;
+            opacity: 0.95;
+            margin-top: 15px;
+        }
+        
+        .meta-info p {
+            margin: 5px 0;
+        }
+        
+        nav {
+            background: #f3f4f6;
+            padding: 15px;
+            margin-bottom: 30px;
+            border-radius: 8px;
+            position: sticky;
+            top: 20px;
+            z-index: 100;
+        }
+        
+        nav a {
+            color: #059669;
+            text-decoration: none;
+            margin-right: 20px;
+            font-size: 0.9em;
+            transition: color 0.3s;
+        }
+        
+        nav a:hover {
+            color: #047857;
+            text-decoration: underline;
+        }
+        
+        .key-point {
+            background: #ecfdf5;
+            border-left: 4px solid #10b981;
+            padding: 20px;
+            margin: 30px 0;
+            border-radius: 0 8px 8px 0;
+        }
+        
+        .key-point strong {
+            color: #047857;
+        }
+        
+        h2 {
+            color: #059669;
+            font-size: 1.8em;
+            margin-top: 50px;
+            margin-bottom: 20px;
+            padding-bottom: 10px;
+            border-bottom: 3px solid #d1fae5;
+        }
+        
+        h3 {
+            color: #047857;
+            font-size: 1.3em;
+            margin-top: 30px;
+            margin-bottom: 15px;
+        }
+        
+        h4 {
+            color: #065f46;
+            font-size: 1.1em;
+            margin-top: 20px;
+            margin-bottom: 10px;
+        }
+        
+        p {
+            margin: 15px 0;
+            line-height: 1.8;
+        }
+        
+        ul, ol {
+            margin: 15px 0 15px 30px;
+            line-height: 1.8;
+        }
+        
+        li {
+            margin: 8px 0;
+        }
+        
+        .highlight-box {
+            background: #fef3c7;
+            border: 2px solid #fbbf24;
+            padding: 20px;
+            margin: 25px 0;
+            border-radius: 8px;
+        }
+        
+        .highlight-box h3 {
+            color: #92400e;
+            margin-top: 0;
+        }
+        
+        .check-list {
+            list-style: none;
+            margin-left: 0;
+        }
+        
+        .check-list li:before {
+            content: "✅ ";
+            margin-right: 8px;
+        }
+        
+        .cross-list {
+            list-style: none;
+            margin-left: 0;
+        }
+        
+        .cross-list li:before {
+            content: "❌ ";
+            margin-right: 8px;
+        }
+        
+        .section {
+            margin: 40px 0;
+        }
+        
+        hr {
+            border: none;
+            border-top: 2px solid #e5e7eb;
+            margin: 40px 0;
+        }
+        
+        .summary-box {
+            background: linear-gradient(135deg, #ecfdf5 0%, #d1fae5 100%);
+            padding: 30px;
+            margin: 40px 0;
+            border-radius: 12px;
+            border: 2px solid #10b981;
+        }
+        
+        .summary-box h3 {
+            color: #047857;
+            margin-top: 15px;
+        }
+        
+        .contact-box {
+            background: #eff6ff;
+            padding: 25px;
+            border-radius: 8px;
+            margin: 30px 0;
+            border-left: 4px solid #3b82f6;
+        }
+        
+        .contact-box a {
+            color: #2563eb;
+            text-decoration: none;
+        }
+        
+        .contact-box a:hover {
+            text-decoration: underline;
+        }
+        
+        footer {
+            margin-top: 60px;
+            padding-top: 30px;
+            border-top: 2px solid #e5e7eb;
+            text-align: center;
+            color: #6b7280;
+            font-size: 0.9em;
+        }
+        
+        .back-to-top {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            background: #22c55e;
+            color: white;
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-decoration: none;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            transition: all 0.3s;
+        }
+        
+        .back-to-top:hover {
+            background: #16a34a;
+            transform: translateY(-3px);
+            box-shadow: 0 6px 12px rgba(0,0,0,0.15);
+        }
+        
+        @media print {
+            .container {
+                max-width: 100%;
+                padding: 20px;
+            }
+            
+            header {
+                background: #22c55e;
+                print-color-adjust: exact;
+                -webkit-print-color-adjust: exact;
+            }
+            
+            nav, .back-to-top {
+                display: none;
+            }
+        }
+        
+        @media (max-width: 768px) {
+            body {
+                font-size: 16px;
+            }
+            
+            .container {
+                padding: 15px;
+            }
+            
+            header {
+                margin: -15px -15px 30px -15px;
+                padding: 30px 15px;
+            }
+            
+            header h1 {
+                font-size: 1.5em;
+            }
+            
+            h2 {
+                font-size: 1.4em;
+            }
+            
+            nav {
+                position: relative;
+                top: 0;
+            }
+            
+            nav a {
+                display: block;
+                margin: 10px 0;
+            }
+            
+            .back-to-top {
+                bottom: 20px;
+                right: 20px;
+                width: 45px;
+                height: 45px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Privacy Policy</h1>
+            <p style="font-size: 1.2em; margin-top: 10px;">Junior Kickers Journey</p>
+            <div class="meta-info">
+                <p><strong>Effective Date:</strong> November 1, 2025</p>
+                <p><strong>Last Updated:</strong> October 26, 2025</p>
+                <p><strong>Version:</strong> 1.0</p>
+            </div>
+        </header>
+
+        <nav>
+            <a href="index.html">← Back to Home</a>
+            <a href="#introduction">Introduction</a>
+            <a href="#collection">Data Collection</a>
+            <a href="#rights">Your Rights</a>
+            <a href="#contact">Contact</a>
+        </nav>
+
+        <section id="introduction" class="section">
+            <h2>Introduction</h2>
+            <p>Junior Kickers Journey ("we", "our", or "the App") is committed to protecting your privacy. This Privacy Policy explains how our mobile application handles information when you use our service.</p>
+            
+            <div class="key-point">
+                <p><strong>Key Point:</strong> Junior Kickers Journey is designed with <strong>privacy first</strong>. We do NOT collect, store, transmit, or share any of your personal data. All information you enter stays on your device.</p>
+            </div>
+        </section>
+
+        <hr>
+
+        <section id="collection" class="section">
+            <h2>Information Collection and Storage</h2>
+            
+            <h3>What We DON'T Collect</h3>
+            <p>Junior Kickers Journey <strong>does NOT collect or access</strong>:</p>
+            <ul class="cross-list">
+                <li>Personal information (names, email addresses, phone numbers)</li>
+                <li>Account credentials (no user accounts exist)</li>
+                <li>Location data or GPS coordinates</li>
+                <li>Device identifiers or tracking information</li>
+                <li>Usage analytics or behavioral data</li>
+                <li>Crash reports or diagnostic information</li>
+                <li>Payment or financial information</li>
+                <li>Social media profiles or connections</li>
+                <li>Contacts or address book data</li>
+                <li>Photos or media files from your device gallery (we create private copies of media you select)</li>
+            </ul>
+
+            <h3>What Stays on Your Device</h3>
+            <p>All information you enter into Junior Kickers Journey remains <strong>locally stored on your device</strong>:</p>
+            <ul class="check-list">
+                <li>Player profiles (child's name, date of birth, positions)</li>
+                <li>Training session logs (dates, durations, notes, ratings)</li>
+                <li>Match records (opponents, scores, statistics, performance)</li>
+                <li>Skill assessments (ratings and progress)</li>
+                <li>Achievement data (badges earned, progress)</li>
+                <li>Media files (photos/videos copied to app's private storage with automatic compression)</li>
+                <li>App settings and preferences</li>
+            </ul>
+
+            <div class="highlight-box">
+                <h4>Important: Media File Handling</h4>
+                <p>When you attach photos or videos to activities, the app creates optimized copies in its private storage directory on your device. Original files in your device gallery remain untouched. Photos are automatically compressed to save storage space while maintaining quality. These copies are only accessible by the app and are deleted if you remove them or uninstall the app.</p>
+            </div>
+        </section>
+
+        <hr>
+
+        <section class="section">
+            <h2>How We Use Information</h2>
+            <p>Since all data stays on your device, we do not "use" your information in any way. You have complete control over:</p>
+            <ul>
+                <li>Creating and editing player profiles</li>
+                <li>Logging training sessions and matches</li>
+                <li>Viewing progress and analytics</li>
+                <li>Managing achievements and media</li>
+                <li>Exporting reports (PDFs generated locally)</li>
+                <li>Deleting data (complete control)</li>
+            </ul>
+            <p>All data processing happens <strong>locally on your device</strong>. No information is sent to our servers or any third parties.</p>
+        </section>
+
+        <hr>
+
+        <section class="section">
+            <h2>Data Sharing and Disclosure</h2>
+            <p><strong>We do NOT share your data with anyone</strong> because we never have access to your data.</p>
+            <ul class="cross-list">
+                <li>No data transmission to our servers</li>
+                <li>No sharing with third parties</li>
+                <li>No selling of information</li>
+                <li>No advertising networks or trackers</li>
+                <li>No analytics services</li>
+                <li>No social media integration (unless you explicitly share via your device's native share function)</li>
+            </ul>
+
+            <h3>Your Sharing Choices</h3>
+            <p>You may optionally choose to share information using your device's native sharing features:</p>
+            <ul>
+                <li>Share achievement celebrations via social media, messaging, or email</li>
+                <li>Export PDF progress reports and share them with coaches, family, or others</li>
+                <li>Take screenshots and share them</li>
+            </ul>
+            <p><strong>These are YOUR choices</strong>. We do not automatically share anything on your behalf.</p>
+        </section>
+
+        <hr>
+
+        <section class="section">
+            <h2>Data Security</h2>
+            
+            <h3>Local Device Security</h3>
+            <p>Since all data is stored locally on your device, security depends on your device's security measures:</p>
+            <ul>
+                <li><strong>Device Encryption:</strong> Data is stored in your device's secure storage (utilizing iOS/Android system encryption)</li>
+                <li><strong>Device Lock:</strong> Protect your device with a passcode, PIN, biometric authentication, or pattern lock</li>
+                <li><strong>App Access:</strong> Optional app lock feature (future enhancement) for additional security</li>
+            </ul>
+
+            <h3>Our Security Measures</h3>
+            <ul>
+                <li>No network communication = no risk of data interception</li>
+                <li>No user accounts = no account breach risk</li>
+                <li>No cloud storage = no cloud security concerns</li>
+                <li>No third-party services = no third-party vulnerabilities</li>
+            </ul>
+
+            <h3>Your Responsibility</h3>
+            <p>To keep your data secure:</p>
+            <ul class="check-list">
+                <li>Use a strong device lock (passcode, biometric)</li>
+                <li>Keep your device's operating system updated</li>
+                <li>Don't share your device with unauthorized users</li>
+                <li>Back up your device regularly (optional)</li>
+            </ul>
+        </section>
+
+        <hr>
+
+        <section class="section">
+            <h2>Children's Privacy</h2>
+            <p>Junior Kickers Journey is designed for parents to track their children's soccer development (typically ages 6-12). We are committed to protecting children's privacy.</p>
+            
+            <h3>COPPA Compliance (Children's Online Privacy Protection Act)</h3>
+            <p>Since our app:</p>
+            <ul>
+                <li>Does NOT collect any personal information</li>
+                <li>Does NOT transmit any data online</li>
+                <li>Does NOT require registration or user accounts</li>
+                <li>Does NOT have social features or community interaction</li>
+            </ul>
+            <p>We do NOT collect "personal information" from children as defined by COPPA. Parents have full control over all data entered into the app.</p>
+
+            <h3>Parental Control</h3>
+            <ul>
+                <li>Parents control ALL data entry</li>
+                <li>Parents decide what information to record</li>
+                <li>Parents control data viewing and deletion</li>
+                <li>Parents decide if/when to share information externally</li>
+            </ul>
+        </section>
+
+        <hr>
+
+        <section class="section">
+            <h2>Data Retention and Deletion</h2>
+            
+            <h3>How Long Data is Stored</h3>
+            <p>Data remains on your device until YOU decide to delete it:</p>
+            <ul>
+                <li>Individual activities (training sessions, matches) can be deleted anytime</li>
+                <li>Player profiles can be edited or deleted</li>
+                <li>Media attachments can be removed</li>
+                <li>The entire app and all data can be deleted by uninstalling the app</li>
+            </ul>
+
+            <h3>How to Delete Your Data</h3>
+            <p><strong>Delete Individual Items:</strong></p>
+            <ul>
+                <li>Navigate to the item (training session, match, player)</li>
+                <li>Use the delete function within the app</li>
+            </ul>
+
+            <p><strong>Delete All Data:</strong></p>
+            <ul>
+                <li>Uninstall the Junior Kickers Journey app from your device</li>
+                <li>This permanently removes all app data from your device</li>
+            </ul>
+
+            <div class="highlight-box">
+                <h4>Important</h4>
+                <p>Once deleted, data CANNOT be recovered (unless you have a device backup). We have no copies of your data.</p>
+            </div>
+        </section>
+
+        <hr>
+
+        <section id="rights" class="section">
+            <h2>Your Rights and Control</h2>
+            <p>Since all data stays on your device, you have <strong>complete control</strong>:</p>
+            
+            <h3>You Have the Right To:</h3>
+            <ul class="check-list">
+                <li><strong>Access:</strong> View all your data anytime within the app</li>
+                <li><strong>Modify:</strong> Edit any information you've entered</li>
+                <li><strong>Delete:</strong> Remove any or all data at any time</li>
+                <li><strong>Export:</strong> Generate PDF reports of your data</li>
+                <li><strong>Control:</strong> Decide what to track and what to share</li>
+                <li><strong>Privacy:</strong> Keep all information completely private</li>
+            </ul>
+
+            <h3>No Need to Request:</h3>
+            <p>Since we never have access to your data, you don't need to request:</p>
+            <ul>
+                <li>Data access (you already have full access)</li>
+                <li>Data correction (you can edit anytime)</li>
+                <li>Data deletion (you can delete anytime)</li>
+                <li>Data portability (export PDFs locally)</li>
+            </ul>
+        </section>
+
+        <hr>
+
+        <section class="section">
+            <h2>Payments and In-App Purchases</h2>
+            <p>Junior Kickers Journey does NOT collect or process payment information directly.</p>
+            
+            <p><strong>If the app includes paid features or in-app purchases:</strong></p>
+            <ul>
+                <li>All payments are processed through Apple App Store or Google Play Store</li>
+                <li>Payment processing is handled entirely by Apple or Google</li>
+                <li>We do not have access to your payment information (credit card details, billing address, etc.)</li>
+                <li>Refer to Apple's or Google's privacy policies for how they handle payment data</li>
+            </ul>
+            
+            <p><strong>Important:</strong> We never collect, store, or have access to your financial or payment information under any circumstances.</p>
+        </section>
+
+        <hr>
+
+        <section class="section">
+            <h2>Third-Party Services</h2>
+            
+            <h3>Services We DO NOT Use</h3>
+            <p>Junior Kickers Journey does NOT integrate with or use:</p>
+            <ul class="cross-list">
+                <li>Analytics services (Google Analytics, Firebase Analytics, etc.)</li>
+                <li>Crash reporting services (Crashlytics, Sentry, etc.)</li>
+                <li>Advertising networks or trackers</li>
+                <li>Cloud storage services (AWS, Google Cloud, iCloud sync, etc.)</li>
+                <li>Social media platforms (direct integration)</li>
+                <li>Third-party payment processors (payments handled by app stores only)</li>
+                <li>Third-party authentication (no accounts)</li>
+            </ul>
+
+            <h3>Platform Services</h3>
+            <p>The app is distributed through:</p>
+            <ul>
+                <li><strong>Apple App Store</strong> (iOS): Subject to Apple's privacy policy</li>
+                <li><strong>Google Play Store</strong> (Android): Subject to Google's privacy policy</li>
+            </ul>
+            <p>These platforms may collect information about app downloads and updates according to their own privacy policies. We do not have access to this information.</p>
+        </section>
+
+        <hr>
+
+        <section class="section">
+            <h2>Device Permissions</h2>
+            <p>Junior Kickers Journey requests minimal device permissions:</p>
+            
+            <h3>Permissions We Request:</h3>
+            <h4>Photo Library Access (Optional)</h4>
+            <ul>
+                <li><strong>Purpose:</strong> To allow you to select photos/videos from your gallery to attach to activities</li>
+                <li><strong>Usage:</strong> We only access photos/videos YOU specifically select</li>
+                <li><strong>Storage:</strong> We create optimized copies of selected media in the app's private storage (photos are compressed, videos are copied as-is)</li>
+                <li><strong>Privacy:</strong> Original files in your gallery remain unchanged and private</li>
+                <li><strong>Deletion:</strong> Copies are automatically deleted when you remove media or uninstall the app</li>
+                <li><strong>Opt-Out:</strong> You can deny this permission; the app will work without media attachments</li>
+            </ul>
+
+            <h3>Permissions We DON'T Request:</h3>
+            <ul class="cross-list">
+                <li>Internet/Network access (app is offline-only)</li>
+                <li>Location services</li>
+                <li>Camera access (you use your device's camera app separately)</li>
+                <li>Contacts access</li>
+                <li>Microphone access</li>
+            </ul>
+        </section>
+
+        <hr>
+
+        <section class="section">
+            <h2>International Users</h2>
+            <p>Junior Kickers Journey can be used anywhere in the world. Since all data stays on your device:</p>
+            <ul class="check-list">
+                <li>No cross-border data transfers</li>
+                <li>No data residency concerns</li>
+                <li>No GDPR compliance issues (we don't collect data)</li>
+                <li>No regional privacy law concerns</li>
+            </ul>
+            <p>Your data never leaves your device, regardless of where you are located.</p>
+        </section>
+
+        <hr>
+
+        <section class="section">
+            <h2>Changes to This Privacy Policy</h2>
+            <p>We may update this Privacy Policy from time to time to reflect:</p>
+            <ul>
+                <li>Changes in legal requirements</li>
+                <li>New features or functionality</li>
+                <li>Improvements to privacy practices</li>
+            </ul>
+
+            <h3>How We Notify You:</h3>
+            <ul>
+                <li>Updated policy will be posted in the app</li>
+                <li>"Last Updated" date will be changed</li>
+                <li>Significant changes will be highlighted in app update notes</li>
+            </ul>
+
+            <p><strong>Your Continued Use:</strong> By continuing to use the app after changes, you accept the updated policy.</p>
+        </section>
+
+        <hr>
+
+        <section class="section">
+            <h2>California Privacy Rights (CCPA)</h2>
+            <p>For California residents, Junior Kickers Journey complies with the California Consumer Privacy Act (CCPA):</p>
+            <p><strong>Personal Information We Collect:</strong> None</p>
+            <p>Since we do not collect, sell, or share personal information, CCPA data rights regarding access, deletion, and opt-out of sale do not apply (there's no data to access, delete, or opt-out of).</p>
+        </section>
+
+        <hr>
+
+        <section class="section">
+            <h2>European Privacy Rights (GDPR)</h2>
+            <p>For users in the European Union, Junior Kickers Journey complies with the General Data Protection Regulation (GDPR):</p>
+            <p><strong>Personal Data We Process:</strong> None</p>
+            <p>Since we do not collect or process personal data, GDPR rights regarding access, rectification, erasure, restriction, portability, and objection are inherently protected (all data stays on your device under your control).</p>
+            <p><strong>Legal Basis:</strong> Not applicable (no data processing)</p>
+        </section>
+
+        <hr>
+
+        <section id="contact" class="section">
+            <h2>Contact Us</h2>
+            <div class="contact-box">
+                <p>If you have questions about this Privacy Policy or our privacy practices:</p>
+                <p><strong>Email:</strong> <a href="mailto:sjuniorkickers@google.com">sjuniorkickers@google.com</a></p>
+                <p><strong>Response Time:</strong> Within 72 hours</p>
+                <p style="margin-top: 15px; font-size: 0.95em; color: #6b7280;">
+                    Please note: Since we don't collect your data, we cannot provide information about data we don't have. For questions about data on YOUR device, you have full access within the app.
+                </p>
+            </div>
+        </section>
+
+        <hr>
+
+        <section class="section">
+            <h2>Consent</h2>
+            <p>By downloading and using Junior Kickers Journey, you acknowledge that you have read and understood this Privacy Policy.</p>
+            
+            <h3>You Consent To:</h3>
+            <ul>
+                <li>Storing data locally on your device</li>
+                <li>Using the app according to these terms</li>
+                <li>Taking responsibility for your device's security</li>
+            </ul>
+
+            <h3>You Do NOT Consent To (because it doesn't happen):</h3>
+            <ul>
+                <li>Data collection by us</li>
+                <li>Data sharing with third parties</li>
+                <li>Online data transmission</li>
+                <li>Tracking or analytics</li>
+            </ul>
+        </section>
+
+        <hr>
+
+        <section class="section">
+            <div class="summary-box">
+                <h2 style="margin-top: 0; color: #047857;">Summary: Our Privacy Commitment</h2>
+                
+                <h3>✅ What We Promise:</h3>
+                <ol>
+                    <li><strong>Zero Data Collection:</strong> We never collect your personal information</li>
+                    <li><strong>Complete Privacy:</strong> All data stays on your device</li>
+                    <li><strong>No Tracking:</strong> We don't track your usage or behavior</li>
+                    <li><strong>No Sharing:</strong> We never share your information with anyone</li>
+                    <li><strong>Full Control:</strong> You own and control 100% of your data</li>
+                    <li><strong>Transparency:</strong> We're completely open about our practices</li>
+                    <li><strong>Simplicity:</strong> No complicated terms or hidden clauses</li>
+                </ol>
+
+                <h3>❌ What We'll Never Do:</h3>
+                <ol>
+                    <li>Collect your personal information</li>
+                    <li>Send your data to our servers</li>
+                    <li>Share your data with third parties</li>
+                    <li>Sell your information</li>
+                    <li>Track you with analytics</li>
+                    <li>Show you targeted ads</li>
+                    <li>Require user accounts or registration</li>
+                </ol>
+            </div>
+        </section>
+
+        <hr>
+
+        <section class="section">
+            <h2>Legal Information</h2>
+            <p><strong>App Name:</strong> Junior Kickers Journey</p>
+            <p><strong>Developer:</strong> Junior Kickers Journey Team</p>
+            <p><strong>Platform:</strong> iOS (15.1+) and Android (7.0+)</p>
+            <p><strong>Distribution:</strong> Apple App Store and Google Play Store</p>
+            <p><strong>Privacy Type:</strong> Offline-Only, Local Storage, Zero Data Collection</p>
+
+            <h3>Compliance:</h3>
+            <ul class="check-list">
+                <li>COPPA (Children's Online Privacy Protection Act)</li>
+                <li>CCPA (California Consumer Privacy Act)</li>
+                <li>GDPR (General Data Protection Regulation)</li>
+                <li>Apple App Store Privacy Guidelines</li>
+                <li>Google Play Privacy and Data Handling Requirements</li>
+            </ul>
+        </section>
+
+        <hr>
+
+        <section class="section">
+            <h2>Acknowledgment</h2>
+            <p>This Privacy Policy was last updated on <strong>October 26, 2025</strong>.</p>
+            <p>By using Junior Kickers Journey, you acknowledge that you have read, understood, and agree to this Privacy Policy.</p>
+            <p style="margin-top: 20px; font-style: italic;">Thank you for trusting Junior Kickers Journey with your child's soccer development tracking. Your privacy is our priority.</p>
+        </section>
+
+        <footer>
+            <p><strong>Version:</strong> 1.0 | <strong>Effective Date:</strong> November 1, 2025 | <strong>Last Reviewed:</strong> October 26, 2025</p>
+            <p style="margin-top: 10px;">Next Review: November 1, 2026 (annually)</p>
+            <p style="margin-top: 20px; font-style: italic;">This privacy policy is written in plain language to ensure all users can understand our commitment to privacy.</p>
+            <p style="margin-top: 30px;"><a href="index.html" style="color: #059669;">Back to Home</a></p>
+        </footer>
+    </div>
+
+    <a href="#" class="back-to-top" title="Back to top">↑</a>
+</body>
+</html>
+
