@@ -1,0 +1,721 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Support & FAQ for Junior Kickers Journey - Get help and find answers to common questions.">
+    <title>Support & FAQ - Junior Kickers Journey</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+            line-height: 1.6;
+            color: #1f2937;
+            background: #f9fafb;
+        }
+        
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 20px;
+            background: white;
+            min-height: 100vh;
+        }
+        
+        header {
+            background: linear-gradient(135deg, #3b82f6 0%, #2563eb 100%);
+            color: white;
+            padding: 40px 20px;
+            margin: -20px -20px 40px -20px;
+            border-radius: 0 0 16px 16px;
+        }
+        
+        header h1 {
+            font-size: 2em;
+            margin-bottom: 10px;
+        }
+        
+        nav {
+            background: #f3f4f6;
+            padding: 15px;
+            margin-bottom: 30px;
+            border-radius: 8px;
+            position: sticky;
+            top: 20px;
+            z-index: 100;
+        }
+        
+        nav a {
+            color: #2563eb;
+            text-decoration: none;
+            margin-right: 20px;
+            font-size: 0.9em;
+            transition: color 0.3s;
+        }
+        
+        nav a:hover {
+            color: #1d4ed8;
+            text-decoration: underline;
+        }
+        
+        .search-box {
+            background: white;
+            border: 2px solid #e5e7eb;
+            padding: 20px;
+            margin: 30px 0;
+            border-radius: 8px;
+        }
+        
+        .search-box input {
+            width: 100%;
+            padding: 12px;
+            font-size: 1em;
+            border: 1px solid #d1d5db;
+            border-radius: 8px;
+        }
+        
+        .category-section {
+            margin: 40px 0;
+        }
+        
+        .category-icon {
+            font-size: 2em;
+            margin-bottom: 10px;
+        }
+        
+        h2 {
+            color: #1e40af;
+            font-size: 1.8em;
+            margin-top: 50px;
+            margin-bottom: 20px;
+            padding-bottom: 10px;
+            border-bottom: 3px solid #dbeafe;
+        }
+        
+        h3 {
+            color: #1e3a8a;
+            font-size: 1.3em;
+            margin-top: 30px;
+            margin-bottom: 15px;
+        }
+        
+        .faq-item {
+            background: #f9fafb;
+            border-left: 4px solid #3b82f6;
+            padding: 20px;
+            margin: 15px 0;
+            border-radius: 0 8px 8px 0;
+            transition: all 0.3s ease;
+        }
+        
+        .faq-item:hover {
+            background: #f3f4f6;
+            transform: translateX(5px);
+        }
+        
+        .faq-question {
+            font-weight: 600;
+            color: #1e40af;
+            font-size: 1.1em;
+            margin-bottom: 10px;
+            cursor: pointer;
+        }
+        
+        .faq-answer {
+            color: #4b5563;
+            line-height: 1.8;
+        }
+        
+        .faq-answer ul {
+            margin: 10px 0 10px 30px;
+        }
+        
+        .faq-answer ol {
+            margin: 10px 0 10px 30px;
+        }
+        
+        .faq-answer li {
+            margin: 8px 0;
+        }
+        
+        .contact-box {
+            background: #eff6ff;
+            padding: 30px;
+            border-radius: 12px;
+            margin: 40px 0;
+            border: 2px solid #3b82f6;
+            text-align: center;
+        }
+        
+        .contact-box h3 {
+            color: #1e40af;
+            margin-top: 0;
+        }
+        
+        .contact-box a {
+            color: #2563eb;
+            text-decoration: none;
+            font-weight: 600;
+        }
+        
+        .contact-box a:hover {
+            text-decoration: underline;
+        }
+        
+        .quick-links {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 20px;
+            margin: 40px 0;
+        }
+        
+        .quick-link-card {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            padding: 30px;
+            border-radius: 12px;
+            text-align: center;
+            text-decoration: none;
+            color: white;
+            transition: all 0.3s ease;
+        }
+        
+        .quick-link-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+        }
+        
+        .quick-link-icon {
+            font-size: 2.5em;
+            margin-bottom: 10px;
+        }
+        
+        .quick-link-card h4 {
+            color: white;
+            margin: 10px 0;
+        }
+        
+        footer {
+            margin-top: 60px;
+            padding-top: 30px;
+            border-top: 2px solid #e5e7eb;
+            text-align: center;
+            color: #6b7280;
+            font-size: 0.9em;
+        }
+        
+        .back-to-top {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            background: #3b82f6;
+            color: white;
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-decoration: none;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            transition: all 0.3s;
+        }
+        
+        .back-to-top:hover {
+            background: #2563eb;
+            transform: translateY(-3px);
+            box-shadow: 0 6px 12px rgba(0,0,0,0.15);
+        }
+        
+        @media (max-width: 768px) {
+            .container {
+                padding: 15px;
+            }
+            
+            header {
+                margin: -15px -15px 30px -15px;
+                padding: 30px 15px;
+            }
+            
+            header h1 {
+                font-size: 1.5em;
+            }
+            
+            h2 {
+                font-size: 1.4em;
+            }
+            
+            nav {
+                position: relative;
+                top: 0;
+            }
+            
+            nav a {
+                display: block;
+                margin: 10px 0;
+            }
+            
+            .back-to-top {
+                bottom: 20px;
+                right: 20px;
+                width: 45px;
+                height: 45px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>💬 Support & FAQ</h1>
+            <p style="font-size: 1.2em; margin-top: 10px;">Junior Kickers Journey</p>
+            <p style="margin-top: 10px; opacity: 0.95;">Find answers to common questions and get help</p>
+        </header>
+
+        <nav>
+            <a href="index.html">← Back to Home</a>
+            <a href="#getting-started">Getting Started</a>
+            <a href="#features">Features</a>
+            <a href="#troubleshooting">Troubleshooting</a>
+            <a href="#contact">Contact</a>
+        </nav>
+
+        <div class="search-box">
+            <input type="text" placeholder="🔍 Search for answers..." id="searchInput">
+        </div>
+
+        <div class="quick-links">
+            <a href="privacy-policy.html" class="quick-link-card">
+                <div class="quick-link-icon">🔒</div>
+                <h4>Privacy Policy</h4>
+            </a>
+            <a href="terms-of-service.html" class="quick-link-card">
+                <div class="quick-link-icon">📄</div>
+                <h4>Terms of Service</h4>
+            </a>
+            <a href="marketing.html" class="quick-link-card">
+                <div class="quick-link-icon">📱</div>
+                <h4>About the App</h4>
+            </a>
+        </div>
+
+        <section id="getting-started" class="category-section">
+            <h2><span class="category-icon">🚀</span> Getting Started</h2>
+            
+            <div class="faq-item">
+                <div class="faq-question">How do I install the app?</div>
+                <div class="faq-answer">
+                    <p>Junior Kickers Journey is available on:</p>
+                    <ul>
+                        <li><strong>iOS:</strong> Download from the App Store (iOS 15.1+ required)</li>
+                        <li><strong>Android:</strong> Download from Google Play (Android 7.0+ required)</li>
+                    </ul>
+                    <p>Simply search for "Junior Kickers Journey" in your app store and tap Install.</p>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question">Do I need an account to use the app?</div>
+                <div class="faq-answer">
+                    <p><strong>No!</strong> Junior Kickers Journey requires no user accounts, no registration, and no login. Simply download the app and start tracking your child's soccer journey.</p>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question">How do I set up my child's profile?</div>
+                <div class="faq-answer">
+                    <p>When you first launch the app, you'll be guided through creating a player profile:</p>
+                        <ol>
+                            <li>Enter your child's name</li>
+                            <li>Select their date of birth</li>
+                            <li>Choose their primary soccer position(s)</li>
+                            <li>Tap "Create Profile"</li>
+                        </ol>
+                    <p>That's it! You're ready to start tracking activities.</p>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question">Can I track multiple children?</div>
+                <div class="faq-answer">
+                    <p><strong>Yes!</strong> Junior Kickers Journey supports multiple players:</p>
+                    <ul>
+                        <li>Go to Settings → Add Player</li>
+                        <li>Create additional profiles for each child</li>
+                        <li>Switch between players anytime from Settings</li>
+                        <li>Each player's data is kept separate and private</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <section id="features" class="category-section">
+            <h2><span class="category-icon">✨</span> Features & Usage</h2>
+            
+            <div class="faq-item">
+                <div class="faq-question">How do I log a training session?</div>
+                <div class="faq-answer">
+                    <p>Logging a training session takes less than 2 minutes:</p>
+                    <ol>
+                        <li>Navigate to the Training tab</li>
+                        <li>Tap "Add Training Session"</li>
+                        <li>Select the date and time</li>
+                        <li>Enter duration (e.g., 60 minutes)</li>
+                        <li>Choose activity type (Practice, Skills, Fitness, etc.)</li>
+                        <li>Select focus areas (optional)</li>
+                        <li>Rate performance (1-5 stars)</li>
+                        <li>Add notes (optional)</li>
+                        <li>Tap "Save"</li>
+                    </ol>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question">How do I record a match?</div>
+                <div class="faq-answer">
+                    <p>Recording a match is simple:</p>
+                    <ol>
+                        <li>Navigate to the Training tab → "Log Match"</li>
+                        <li>Select date and time</li>
+                        <li>Enter opponent name</li>
+                        <li>Select home/away</li>
+                        <li>Enter team and opponent scores</li>
+                        <li>Record your child's statistics (goals, assists, etc.)</li>
+                        <li>Select position(s) played</li>
+                        <li>Enter minutes played</li>
+                        <li>Rate performance</li>
+                        <li>Add notes (optional)</li>
+                        <li>Tap "Save"</li>
+                    </ol>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question">How do I edit a training session or match?</div>
+                <div class="faq-answer">
+                    <p>You can edit any activity after logging it:</p>
+                    <ol>
+                        <li>Navigate to the Training tab</li>
+                        <li>Find the activity you want to edit</li>
+                        <li>Tap the "✏️ Edit" button on the activity card</li>
+                        <li>Make your changes to any fields</li>
+                        <li>Tap "Update Training Session" or "Update Match"</li>
+                    </ol>
+                    <p><strong>Note:</strong> The app will recalculate achievements based on the updated data. If an achievement no longer qualifies (e.g., reducing goals from 3 to 2 removes "Hat Trick Hero"), you'll be notified.</p>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question">How do I add photos or videos to activities?</div>
+                <div class="faq-answer">
+                    <p>Adding media is optional and separate from editing activities:</p>
+                    <ol>
+                        <li>Find the activity in the Training tab</li>
+                        <li>Tap "📸 Add Media" on the activity card</li>
+                        <li>Choose "Take Photo/Video" or "Select from Gallery"</li>
+                        <li>Select or capture your media</li>
+                        <li>Media is automatically attached to the activity</li>
+                    </ol>
+                    <p><strong>Important:</strong> Photos are automatically compressed to save storage space while maintaining quality. Original files in your gallery remain unchanged.</p>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question">What are achievements and how do I earn them?</div>
+                <div class="faq-answer">
+                    <p>Achievements celebrate your child's soccer milestones:</p>
+                    <ul>
+                        <li><strong>First Steps:</strong> Complete your first training session</li>
+                        <li><strong>First Goal:</strong> Score your first goal in a match</li>
+                        <li><strong>Hat Trick Hero:</strong> Score 3 goals in one match</li>
+                        <li><strong>Consistency Champion:</strong> Train 5 days in a row</li>
+                        <li><strong>Dedicated Player:</strong> Complete 10 training sessions</li>
+                        <li><strong>Time Investment:</strong> Log 50 hours of training</li>
+                        <li><strong>First Month:</strong> Track activities for a full month</li>
+                        <li><strong>Early Bird:</strong> Log training before 8 AM</li>
+                    </ul>
+                    <p>And more! Check the Achievements tab to see all available milestones and your progress.</p>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question">How do I view progress and statistics?</div>
+                <div class="faq-answer">
+                    <p>The Dashboard provides an overview of your child's soccer journey:</p>
+                    <ul>
+                        <li><strong>Quick Stats:</strong> Total sessions, matches, hours, and goals</li>
+                        <li><strong>Activity Timeline:</strong> Recent activities at a glance</li>
+                        <li><strong>Progress Tab:</strong> Detailed analytics and charts</li>
+                        <li><strong>Activity Analytics:</strong> Training and match trends</li>
+                        <li><strong>PDF Reports:</strong> Export comprehensive progress reports</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <section id="troubleshooting" class="category-section">
+            <h2><span class="category-icon">🔧</span> Troubleshooting</h2>
+            
+            <div class="faq-item">
+                <div class="faq-question">I don't see my training session after saving. What happened?</div>
+                <div class="faq-answer">
+                    <p>First, check these locations:</p>
+                    <ul>
+                        <li>Go to the Dashboard and scroll to the Activity Timeline</li>
+                        <li>Navigate to the Training tab</li>
+                        <li>Refresh the screen (pull down to refresh)</li>
+                    </ul>
+                    <p>If your activity is still missing, please contact support with details about what you tried to log.</p>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question">Can I use the app offline?</div>
+                <div class="faq-answer">
+                    <p><strong>Yes!</strong> Junior Kickers Journey works <em>completely offline</em>:</p>
+                    <ul>
+                        <li>No internet connection required</li>
+                        <li>All data is stored on your device</li>
+                        <li>All features work without Wi-Fi or cellular data</li>
+                        <li>You can track activities anywhere, anytime</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question">Where is my data stored?</div>
+                <div class="faq-answer">
+                    <p>All data is stored <strong>locally on your device</strong>:</p>
+                    <ul>
+                        <li>Nothing is uploaded to the cloud</li>
+                        <li>Nothing is sent to our servers</li>
+                        <li>Data stays in the app's private storage on your device</li>
+                        <li>You have complete control over your data</li>
+                    </ul>
+                    <p><strong>Important:</strong> If you uninstall the app or lose your device without backup, your data will be lost. We recommend backing up your device regularly through iCloud (iOS) or Google Drive (Android).</p>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question">How do I delete data?</div>
+                <div class="faq-answer">
+                    <p>You can delete data in several ways:</p>
+                    <ul>
+                        <li><strong>Delete Individual Media:</strong> Remove photos or videos attached to activities (select media in Gallery tab and delete)</li>
+                        <li><strong>Delete Player:</strong> Go to Settings, tap the player, then delete (you can't delete your last player)</li>
+                        <li><strong>Delete All Data:</strong> Uninstall the app from your device</li>
+                    </ul>
+                    <p><strong>Note:</strong> Individual training sessions and matches cannot be deleted yet. This feature is planned for a future update.</p>
+                    <p><strong>Warning:</strong> Deleted data cannot be recovered. Please be careful when deleting.</p>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question">The app isn't working on my device. What should I do?</div>
+                <div class="faq-answer">
+                    <p>Try these steps:</p>
+                    <ol>
+                        <li><strong>Check Requirements:</strong> iOS 15.1+ or Android 7.0+</li>
+                        <li><strong>Update the App:</strong> Make sure you have the latest version</li>
+                        <li><strong>Restart Your Device:</strong> Close and reopen the app</li>
+                        <li><strong>Check Storage:</strong> Ensure you have enough space on your device</li>
+                        <li><strong>Reinstall:</strong> As a last resort, uninstall and reinstall the app (this will delete all data)</li>
+                    </ol>
+                    <p>If issues persist, contact support with your device model and OS version.</p>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question">Will I lose my data if I update the app?</div>
+                <div class="faq-answer">
+                    <p><strong>No!</strong> App updates preserve all your data:</p>
+                    <ul>
+                        <li>Training sessions remain intact</li>
+                        <li>Match records are preserved</li>
+                        <li>Achievements stay earned</li>
+                        <li>Statistics remain accurate</li>
+                        <li>Photos and videos are maintained</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question">What device permissions does the app need?</div>
+                <div class="faq-answer">
+                    <p>Junior Kickers Journey requests minimal permissions:</p>
+                    <ul>
+                        <li><strong>Camera (optional):</strong> Take photos/videos directly in the app</li>
+                        <li><strong>Photo Library (optional):</strong> Select existing photos/videos from your gallery</li>
+                    </ul>
+                    <p>You can deny these permissions and still use all other features. The app does not request or need internet, location, contacts, or any other permissions.</p>
+                </div>
+            </div>
+        </section>
+
+        <hr>
+
+        <section class="category-section">
+            <h2><span class="category-icon">🔒</span> Privacy & Security</h2>
+            
+            <div class="faq-item">
+                <div class="faq-question">Does the app collect my personal information?</div>
+                <div class="faq-answer">
+                    <p><strong>No!</strong> Junior Kickers Journey collects <strong>zero data</strong>:</p>
+                    <ul>
+                        <li>No personal information collection</li>
+                        <li>No data transmission to servers</li>
+                        <li>No analytics or tracking</li>
+                        <li>No user accounts</li>
+                        <li>All data stays on your device</li>
+                    </ul>
+                    <p>See our <a href="privacy-policy.html">Privacy Policy</a> for complete details.</p>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question">Is my child's data safe?</div>
+                <div class="faq-answer">
+                    <p><strong>Absolutely!</strong> Your child's data is completely private and secure:</p>
+                    <ul>
+                        <li>Data never leaves your device</li>
+                        <li>No cloud storage or backups</li>
+                        <li>No sharing with third parties</li>
+                        <li>No data collection by us</li>
+                        <li>You have full control over the data</li>
+                    </ul>
+                    <p>Your device's security (passcode, biometric lock) protects the app and its data.</p>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question">Can I share data with others?</div>
+                <div class="faq-answer">
+                    <p><strong>Yes, if you choose to!</strong> You control what to share:</p>
+                    <ul>
+                        <li>Share achievements via social media or messaging</li>
+                        <li>Export PDF progress reports to email or save</li>
+                        <li>Take screenshots and share them</li>
+                        <li>Share photos/videos attached to activities</li>
+                    </ul>
+                    <p>All sharing is <strong>your choice</strong>. We never share anything automatically.</p>
+                </div>
+            </div>
+        </section>
+
+        <hr>
+
+        <section class="category-section">
+            <h2><span class="category-icon">❓</span> General Questions</h2>
+            
+            <div class="faq-item">
+                <div class="faq-question">How much does the app cost?</div>
+                <div class="faq-answer">
+                    <p>Junior Kickers Journey is free to download and use. All features are available at no cost.</p>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question">What ages is this app designed for?</div>
+                <div class="faq-answer">
+                    <p>Junior Kickers Journey is designed for:</p>
+                    <ul>
+                        <li><strong>Children:</strong> Ages 6-12 who play soccer</li>
+                        <li><strong>Parents:</strong> Who want to track their child's development</li>
+                    </ul>
+                    <p>The app is primarily used by parents, but children can also view their progress and achievements together with you.</p>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question">Does the app work without internet?</div>
+                <div class="faq-answer">
+                    <p><strong>Yes!</strong> Junior Kickers Journey is <strong>completely offline</strong>:</p>
+                    <ul>
+                        <li>Works without Wi-Fi or cellular data</li>
+                        <li>All features are available offline</li>
+                        <li>No cloud sync or internet connection needed</li>
+                        <li>Use it anywhere, anytime</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question">Will there be future updates or new features?</div>
+                <div class="faq-answer">
+                    <p>We're always working to improve Junior Kickers Journey! Future updates may include:</p>
+                    <ul>
+                        <li>New achievements and milestones</li>
+                        <li>Enhanced analytics and reports</li>
+                        <li>Improved user interface</li>
+                        <li>Bug fixes and performance improvements</li>
+                    </ul>
+                    <p>All updates will be released through the App Store and Google Play.</p>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question">How do I provide feedback or suggest features?</div>
+                <div class="faq-answer">
+                    <p>We'd love to hear from you! You can:</p>
+                    <ul>
+                        <li>Email us at <a href="mailto:sjuniorkickers@google.com">sjuniorkickers@google.com</a></li>
+                        <li>Leave a review on the App Store or Google Play</li>
+                        <li>Share your ideas for future features</li>
+                        <li>Report any bugs or issues you encounter</li>
+                    </ul>
+                    <p>Your feedback helps us make Junior Kickers Journey better for all families!</p>
+                </div>
+            </div>
+        </section>
+
+        <hr>
+
+        <div id="contact" class="contact-box">
+            <h3>Still Need Help?</h3>
+            <p>Can't find the answer you're looking for?</p>
+            <p>Contact our support team:</p>
+            <p style="margin-top: 20px; font-size: 1.2em;">
+                <strong>Email:</strong> <a href="mailto:sjuniorkickers@google.com">sjuniorkickers@google.com</a>
+            </p>
+            <p><strong>Response Time:</strong> Within 72 hours</p>
+        </div>
+
+        <footer>
+            <p><strong>Junior Kickers Journey</strong> Support & FAQ</p>
+            <p style="margin-top: 10px; font-style: italic;">Need more information? Check out our legal documents:</p>
+            <p style="margin-top: 20px;">
+                <a href="privacy-policy.html" style="color: #2563eb; text-decoration: none;">Privacy Policy</a> • 
+                <a href="terms-of-service.html" style="color: #2563eb; text-decoration: none;">Terms of Service</a> • 
+                <a href="index.html" style="color: #2563eb; text-decoration: none;">Home</a>
+            </p>
+            <p style="margin-top: 30px; color: #9ca3af; font-size: 0.9em;">
+                © 2025 Junior Kickers Journey. All rights reserved.
+            </p>
+        </footer>
+    </div>
+
+    <a href="#" class="back-to-top" title="Back to top">↑</a>
+
+    <script>
+        // Simple search functionality
+        document.getElementById('searchInput').addEventListener('input', function(e) {
+            const searchTerm = e.target.value.toLowerCase();
+            const faqItems = document.querySelectorAll('.faq-item');
+            
+            faqItems.forEach(item => {
+                const text = item.textContent.toLowerCase();
+                if (text.includes(searchTerm) || searchTerm === '') {
+                    item.style.display = 'block';
+                } else {
+                    item.style.display = 'none';
+                }
+            });
+        });
+    </script>
+</body>
+</html>
+
