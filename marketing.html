@@ -2,10 +2,16 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
     <meta name="description" content="Junior Kickers Journey - Track your child's soccer development. Simple, private, offline app for parents.">
     <meta name="keywords" content="soccer, youth sports, tracking, training log, progress, achievements, offline, private, children, development">
+    <meta name="theme-color" content="#667eea">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
     <title>Junior Kickers Journey - Track Your Child's Soccer Development</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,600;9..40,700&family=Bricolage+Grotesque:wght@600;700;800&display=swap" rel="stylesheet">
     
     <style>
         * {
@@ -23,15 +29,27 @@
             --bg-light: #F8F9FA;
             --white: #FFFFFF;
             --shadow: rgba(0,0,0,0.1);
+            --shadow-heavy: rgba(0,0,0,0.15);
             --gradient-1: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
             --gradient-2: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
             --gradient-3: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);
             --gradient-4: linear-gradient(135deg, #43e97b 0%, #38f9d7 100%);
             --gradient-5: linear-gradient(135deg, #fa709a 0%, #fee140 100%);
+            --font-display: 'Bricolage Grotesque', system-ui, sans-serif;
+            --font-body: 'DM Sans', -apple-system, BlinkMacSystemFont, system-ui, sans-serif;
+            --radius-sm: 12px;
+            --radius-md: 20px;
+            --radius-lg: 50px;
+        }
+
+        html {
+            font-size: 16px;
+            -webkit-text-size-adjust: 100%;
+            scroll-behavior: smooth;
         }
 
         body {
-            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+            font-family: var(--font-body);
             color: var(--text-dark);
             line-height: 1.6;
             overflow-x: hidden;
@@ -41,12 +59,15 @@
         .hero {
             position: relative;
             min-height: 100vh;
+            min-height: 100dvh;
             display: flex;
             align-items: center;
             justify-content: center;
             background: linear-gradient(135deg, #667eea 0%, #764ba2 50%, #f093fb 100%);
             overflow: hidden;
-            padding: 80px 20px;
+            padding: clamp(60px, 12vh, 100px) clamp(16px, 5vw, 24px);
+            padding-top: max(env(safe-area-inset-top), clamp(60px, 12vh, 100px));
+            padding-bottom: max(env(safe-area-inset-bottom), clamp(40px, 8vh, 60px));
         }
 
         .hero::before {
@@ -69,55 +90,68 @@
             position: relative;
             z-index: 2;
             max-width: 800px;
+            width: 100%;
             text-align: center;
             color: white;
+            padding: 0 clamp(8px, 2vw, 16px);
         }
 
         .hero h1 {
-            font-size: 3.5rem;
+            font-family: var(--font-display);
+            font-size: clamp(2rem, 8vw, 3.5rem);
             font-weight: 800;
-            margin-bottom: 20px;
+            margin-bottom: clamp(12px, 3vw, 20px);
             text-shadow: 0 2px 20px rgba(0,0,0,0.2);
             animation: fadeInUp 1s ease-out;
+            letter-spacing: -0.02em;
+            line-height: 1.1;
         }
 
         .hero .tagline {
-            font-size: 1.5rem;
-            margin-bottom: 30px;
+            font-size: clamp(1.1rem, 4vw, 1.5rem);
+            margin-bottom: clamp(16px, 4vw, 30px);
             opacity: 0.95;
-            font-weight: 300;
+            font-weight: 400;
             animation: fadeInUp 1.2s ease-out;
+            line-height: 1.4;
         }
 
         .hero .subtitle {
-            font-size: 1.1rem;
-            margin-bottom: 40px;
+            font-size: clamp(0.95rem, 3vw, 1.1rem);
+            margin-bottom: clamp(24px, 6vw, 40px);
             opacity: 0.9;
             animation: fadeInUp 1.4s ease-out;
+            line-height: 1.5;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
         }
 
         .cta-buttons {
             display: flex;
-            gap: 20px;
+            gap: clamp(12px, 3vw, 20px);
             justify-content: center;
             flex-wrap: wrap;
-            margin-top: 40px;
+            margin-top: clamp(24px, 5vw, 40px);
             animation: fadeInUp 1.6s ease-out;
         }
 
         .btn {
             display: inline-flex;
             align-items: center;
+            justify-content: center;
             gap: 10px;
-            padding: 16px 32px;
-            font-size: 1.1rem;
+            padding: clamp(14px, 3vw, 18px) clamp(24px, 5vw, 36px);
+            font-size: clamp(0.95rem, 2.5vw, 1.1rem);
             font-weight: 600;
             text-decoration: none;
-            border-radius: 50px;
-            transition: all 0.3s ease;
+            border-radius: var(--radius-lg);
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
             cursor: pointer;
             border: none;
             box-shadow: 0 4px 20px rgba(0,0,0,0.2);
+            min-height: 52px;
+            -webkit-tap-highlight-color: transparent;
         }
 
         .btn-primary {
@@ -130,16 +164,25 @@
             box-shadow: 0 6px 30px rgba(0,0,0,0.3);
         }
 
+        .btn-primary:active {
+            transform: translateY(-1px);
+        }
+
         .btn-secondary {
             background: rgba(255,255,255,0.2);
             color: white;
             backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
             border: 2px solid white;
         }
 
         .btn-secondary:hover {
             background: rgba(255,255,255,0.3);
             transform: translateY(-3px);
+        }
+
+        .btn-secondary:active {
+            transform: translateY(-1px);
         }
 
         @keyframes fadeInUp {
@@ -155,43 +198,51 @@
 
         /* Features Section */
         .features {
-            padding: 100px 20px;
+            padding: clamp(60px, 12vw, 100px) clamp(16px, 5vw, 24px);
             background: var(--bg-light);
         }
 
         .container {
             max-width: 1200px;
             margin: 0 auto;
+            width: 100%;
         }
 
         .section-title {
+            font-family: var(--font-display);
             text-align: center;
-            font-size: 2.5rem;
+            font-size: clamp(1.75rem, 6vw, 2.5rem);
             font-weight: 700;
-            margin-bottom: 20px;
+            margin-bottom: clamp(12px, 3vw, 20px);
             color: var(--text-dark);
+            letter-spacing: -0.02em;
+            line-height: 1.2;
         }
 
         .section-subtitle {
             text-align: center;
-            font-size: 1.2rem;
+            font-size: clamp(1rem, 3vw, 1.2rem);
             color: var(--text-light);
-            margin-bottom: 60px;
+            margin-bottom: clamp(32px, 8vw, 60px);
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+            line-height: 1.5;
         }
 
         .features-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 40px;
-            margin-top: 60px;
+            grid-template-columns: repeat(auto-fit, minmax(min(100%, 280px), 1fr));
+            gap: clamp(20px, 5vw, 40px);
+            margin-top: clamp(32px, 8vw, 60px);
         }
 
         .feature-card {
             background: white;
-            padding: 40px;
-            border-radius: 20px;
+            padding: clamp(24px, 5vw, 40px);
+            border-radius: var(--radius-md);
             box-shadow: 0 10px 30px var(--shadow);
-            transition: all 0.3s ease;
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
             position: relative;
             overflow: hidden;
         }
@@ -213,19 +264,19 @@
         }
 
         .feature-card:hover {
-            transform: translateY(-10px);
-            box-shadow: 0 20px 50px var(--shadow);
+            transform: translateY(-8px);
+            box-shadow: 0 20px 50px var(--shadow-heavy);
         }
 
         .feature-icon {
-            width: 70px;
-            height: 70px;
-            font-size: 2.5rem;
+            width: clamp(56px, 12vw, 70px);
+            height: clamp(56px, 12vw, 70px);
+            font-size: clamp(1.75rem, 5vw, 2.5rem);
             display: flex;
             align-items: center;
             justify-content: center;
-            border-radius: 20px;
-            margin-bottom: 20px;
+            border-radius: clamp(14px, 3vw, 20px);
+            margin-bottom: clamp(14px, 3vw, 20px);
             background: var(--gradient-1);
             color: white;
         }
@@ -234,112 +285,124 @@
         .feature-card:nth-child(3) .feature-icon { background: var(--gradient-3); }
         .feature-card:nth-child(4) .feature-icon { background: var(--gradient-4); }
         .feature-card:nth-child(5) .feature-icon { background: var(--gradient-5); }
+        .feature-card:nth-child(6) .feature-icon { background: var(--gradient-1); }
+        .feature-card:nth-child(7) .feature-icon { background: var(--gradient-2); }
 
         .feature-card h3 {
-            font-size: 1.5rem;
-            margin-bottom: 15px;
+            font-family: var(--font-display);
+            font-size: clamp(1.2rem, 3.5vw, 1.5rem);
+            margin-bottom: clamp(10px, 2vw, 15px);
             color: var(--text-dark);
+            font-weight: 600;
         }
 
         .feature-card p {
             color: var(--text-light);
-            line-height: 1.8;
+            line-height: 1.7;
+            font-size: clamp(0.9rem, 2.5vw, 1rem);
         }
 
         /* Screenshots Section */
         .screenshots {
-            padding: 100px 20px;
+            padding: clamp(60px, 12vw, 100px) clamp(16px, 5vw, 24px);
             background: white;
         }
 
         .screenshots-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 30px;
-            margin-top: 60px;
+            grid-template-columns: repeat(auto-fit, minmax(min(100%, 220px), 1fr));
+            gap: clamp(16px, 4vw, 30px);
+            margin-top: clamp(32px, 8vw, 60px);
         }
 
         .screenshot-card {
             background: white;
-            border-radius: 20px;
+            border-radius: var(--radius-md);
             overflow: hidden;
             box-shadow: 0 10px 30px var(--shadow);
-            transition: all 0.3s ease;
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
         }
 
         .screenshot-card:hover {
-            transform: translateY(-10px);
-            box-shadow: 0 20px 50px var(--shadow);
+            transform: translateY(-8px);
+            box-shadow: 0 20px 50px var(--shadow-heavy);
         }
 
         .screenshot-placeholder {
             width: 100%;
-            height: 500px;
+            height: clamp(300px, 60vw, 500px);
             background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
             display: flex;
             align-items: center;
             justify-content: center;
             color: white;
-            font-size: 3rem;
+            font-size: clamp(2rem, 6vw, 3rem);
         }
 
         .screenshot-img {
             width: 100%;
             height: auto;
             display: block;
+            object-fit: cover;
         }
 
         .screenshot-label {
-            padding: 20px;
+            padding: clamp(14px, 3vw, 20px);
             text-align: center;
             font-weight: 600;
             color: var(--text-dark);
+            font-size: clamp(0.9rem, 2.5vw, 1rem);
         }
 
         /* Benefits Section */
         .benefits {
-            padding: 100px 20px;
+            padding: clamp(60px, 12vw, 100px) clamp(16px, 5vw, 24px);
             background: var(--bg-light);
         }
 
         .benefits-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 30px;
-            margin-top: 60px;
+            grid-template-columns: repeat(auto-fit, minmax(min(100%, 160px), 1fr));
+            gap: clamp(16px, 4vw, 30px);
+            margin-top: clamp(32px, 8vw, 60px);
         }
 
         .benefit-item {
             background: white;
-            padding: 30px;
-            border-radius: 20px;
+            padding: clamp(20px, 4vw, 30px);
+            border-radius: var(--radius-md);
             text-align: center;
             box-shadow: 0 5px 20px var(--shadow);
-            transition: all 0.3s ease;
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
         }
 
         .benefit-item:hover {
-            transform: scale(1.05);
+            transform: scale(1.03);
+            box-shadow: 0 10px 30px var(--shadow-heavy);
         }
 
         .benefit-icon {
-            font-size: 3rem;
-            margin-bottom: 20px;
+            font-size: clamp(2rem, 6vw, 3rem);
+            margin-bottom: clamp(12px, 3vw, 20px);
         }
 
         .benefit-item h4 {
-            font-size: 1.3rem;
-            margin-bottom: 10px;
+            font-family: var(--font-display);
+            font-size: clamp(1rem, 3vw, 1.3rem);
+            margin-bottom: clamp(8px, 2vw, 10px);
             color: var(--text-dark);
+            font-weight: 600;
         }
 
         .benefit-item p {
             color: var(--text-light);
+            font-size: clamp(0.85rem, 2.2vw, 1rem);
+            line-height: 1.5;
         }
 
         /* Privacy Section */
         .privacy {
-            padding: 100px 20px;
+            padding: clamp(60px, 12vw, 100px) clamp(16px, 5vw, 24px);
             background: linear-gradient(135deg, #2C3E50 0%, #34495E 100%);
             color: white;
         }
@@ -348,46 +411,68 @@
             max-width: 800px;
             margin: 0 auto;
             text-align: center;
+            padding: 0 clamp(8px, 2vw, 16px);
         }
 
         .privacy h2 {
-            font-size: 2.5rem;
-            margin-bottom: 30px;
+            font-family: var(--font-display);
+            font-size: clamp(1.75rem, 6vw, 2.5rem);
+            margin-bottom: clamp(20px, 5vw, 30px);
+            font-weight: 700;
+            letter-spacing: -0.02em;
         }
 
         .privacy p {
-            font-size: 1.2rem;
+            font-size: clamp(1rem, 3vw, 1.2rem);
             line-height: 1.8;
             opacity: 0.95;
         }
 
         .privacy-icon {
-            font-size: 5rem;
-            margin-bottom: 30px;
+            font-size: clamp(3rem, 10vw, 5rem);
+            margin-bottom: clamp(20px, 5vw, 30px);
+        }
+
+        .privacy-cta {
+            margin-top: clamp(28px, 6vw, 40px);
         }
 
         /* CTA Section */
         .cta-section {
-            padding: 100px 20px;
+            padding: clamp(60px, 12vw, 100px) clamp(16px, 5vw, 24px);
             background: var(--gradient-1);
             text-align: center;
             color: white;
         }
 
         .cta-section h2 {
-            font-size: 2.5rem;
-            margin-bottom: 20px;
+            font-family: var(--font-display);
+            font-size: clamp(1.75rem, 6vw, 2.5rem);
+            margin-bottom: clamp(14px, 3vw, 20px);
+            font-weight: 700;
+            letter-spacing: -0.02em;
         }
 
         .cta-section p {
-            font-size: 1.3rem;
-            margin-bottom: 40px;
+            font-size: clamp(1rem, 3vw, 1.3rem);
+            margin-bottom: clamp(28px, 6vw, 40px);
             opacity: 0.95;
+            line-height: 1.5;
+        }
+
+        .cta-section .coming-soon-text {
+            margin-top: clamp(28px, 6vw, 40px);
+            opacity: 0.8;
+        }
+
+        .cta-section .coming-soon-text p {
+            margin-bottom: 0;
         }
 
         /* Footer */
         .footer {
-            padding: 60px 20px;
+            padding: clamp(40px, 8vw, 60px) clamp(16px, 5vw, 24px);
+            padding-bottom: max(env(safe-area-inset-bottom), clamp(40px, 8vw, 60px));
             background: #1A1A1A;
             color: white;
             text-align: center;
@@ -398,11 +483,18 @@
             margin: 0 auto;
         }
 
+        .footer-title {
+            font-family: var(--font-display);
+            font-size: clamp(1.25rem, 4vw, 1.5rem);
+            margin-bottom: clamp(20px, 5vw, 30px);
+            font-weight: 600;
+        }
+
         .footer-links {
             display: flex;
             justify-content: center;
-            gap: 30px;
-            margin-bottom: 30px;
+            gap: clamp(16px, 4vw, 30px);
+            margin-bottom: clamp(20px, 5vw, 30px);
             flex-wrap: wrap;
         }
 
@@ -410,6 +502,11 @@
             color: white;
             text-decoration: none;
             transition: all 0.3s ease;
+            padding: 8px;
+            font-size: clamp(0.9rem, 2.5vw, 1rem);
+            min-height: 44px;
+            display: inline-flex;
+            align-items: center;
         }
 
         .footer-links a:hover {
@@ -418,33 +515,53 @@
 
         .footer p {
             opacity: 0.7;
+            font-size: clamp(0.85rem, 2.2vw, 1rem);
         }
 
-        /* Responsive */
-        @media (max-width: 768px) {
-            .hero h1 {
-                font-size: 2.5rem;
-            }
-
-            .hero .tagline {
-                font-size: 1.2rem;
-            }
-
-            .section-title {
-                font-size: 2rem;
-            }
-
-            .features-grid {
-                grid-template-columns: 1fr;
-            }
-
+        /* Responsive adjustments */
+        @media (max-width: 480px) {
             .cta-buttons {
                 flex-direction: column;
+                width: 100%;
             }
 
             .btn {
                 width: 100%;
-                justify-content: center;
+            }
+
+            .benefits-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .screenshots-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .footer-links {
+                flex-direction: column;
+                gap: 8px;
+            }
+
+            .footer-links a {
+                padding: 12px;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .features-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        @media (min-width: 769px) {
+            .benefits-grid {
+                grid-template-columns: repeat(3, 1fr);
+            }
+        }
+
+        @media (min-width: 1024px) {
+            .benefits-grid {
+                grid-template-columns: repeat(6, 1fr);
             }
         }
 
@@ -465,12 +582,66 @@
         /* Badge */
         .badge {
             display: inline-block;
-            padding: 8px 16px;
+            padding: clamp(6px, 1.5vw, 8px) clamp(12px, 3vw, 16px);
             background: rgba(255,255,255,0.2);
             border-radius: 20px;
-            font-size: 0.9rem;
-            margin-bottom: 20px;
+            font-size: clamp(0.8rem, 2.2vw, 0.9rem);
+            margin-bottom: clamp(14px, 3vw, 20px);
             backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+        }
+
+        /* Reduced motion */
+        @media (prefers-reduced-motion: reduce) {
+            *,
+            *::before,
+            *::after {
+                animation-duration: 0.01ms !important;
+                animation-iteration-count: 1 !important;
+                transition-duration: 0.01ms !important;
+                scroll-behavior: auto !important;
+            }
+            
+            .hero::before {
+                animation: none;
+            }
+        }
+
+        /* Touch device optimizations */
+        @media (hover: none) and (pointer: coarse) {
+            .feature-card:hover,
+            .screenshot-card:hover,
+            .benefit-item:hover {
+                transform: none;
+                box-shadow: 0 10px 30px var(--shadow);
+            }
+            
+            .feature-card:active,
+            .screenshot-card:active,
+            .benefit-item:active {
+                transform: scale(0.98);
+            }
+            
+            .btn:hover {
+                transform: none;
+            }
+            
+            .btn:active {
+                transform: scale(0.97);
+            }
+        }
+
+        /* High contrast mode */
+        @media (prefers-contrast: high) {
+            .feature-card,
+            .screenshot-card,
+            .benefit-item {
+                border: 2px solid var(--text-dark);
+            }
+            
+            .btn-secondary {
+                border-width: 3px;
+            }
         }
     </style>
 </head>
@@ -628,7 +799,7 @@
             <div class="privacy-icon">🔒</div>
             <h2>Your Privacy is Our Priority</h2>
             <p>Junior Kickers Journey is built with privacy at its core. All your child's data stays on your device. No cloud storage, no data sharing, no tracking. You have complete control over your family's soccer journey.</p>
-            <div style="margin-top: 40px;">
+            <div class="privacy-cta">
                 <a href="privacy-policy.html" class="btn btn-primary">Read Privacy Policy</a>
             </div>
         </div>
@@ -648,7 +819,7 @@
                 Download on Google Play
             </a>
         </div>
-        <div style="margin-top: 40px; opacity: 0.8;">
+        <div class="coming-soon-text">
             <p class="pulse">⚽ Coming Soon - January 2026</p>
         </div>
     </section>
@@ -656,12 +827,12 @@
     <!-- Footer -->
     <footer class="footer">
         <div class="footer-content">
-            <h3 style="margin-bottom: 30px; font-size: 1.5rem;">Junior Kickers Journey</h3>
-            <div class="footer-links">
+            <h3 class="footer-title">Junior Kickers Journey</h3>
+            <nav class="footer-links">
                 <a href="index.html">Legal Documents</a>
                 <a href="privacy-policy.html">Privacy Policy</a>
                 <a href="mailto:sjuniorkickers@gmail.com">Contact Us</a>
-            </div>
+            </nav>
             <p>&copy; 2025 Junior Kickers Journey. All rights reserved.</p>
         </div>
     </footer>
