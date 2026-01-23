@@ -4,749 +4,1310 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Privacy Policy for Junior Kickers Journey - Learn how we protect your privacy with our offline-first, zero data collection approach.">
+    <meta name="theme-color" content="#059669">
     <title>Privacy Policy - Junior Kickers Journey</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
     <style>
+        :root {
+            --primary: #059669;
+            --primary-dark: #047857;
+            --primary-light: #d1fae5;
+            --secondary: #3b82f6;
+            --secondary-light: #dbeafe;
+            --accent: #f59e0b;
+            --accent-light: #fef3c7;
+            --text-primary: #111827;
+            --text-secondary: #4b5563;
+            --text-muted: #9ca3af;
+            --bg-primary: #ffffff;
+            --bg-secondary: #f9fafb;
+            --bg-tertiary: #f3f4f6;
+            --border: #e5e7eb;
+            --shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.05);
+            --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+            --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+            --radius-sm: 8px;
+            --radius-md: 12px;
+            --radius-lg: 16px;
+            --radius-xl: 24px;
+        }
+
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
         }
-        
+
+        html {
+            scroll-behavior: smooth;
+        }
+
         body {
-            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
             line-height: 1.6;
-            color: #1f2937;
-            background: #f9fafb;
+            color: var(--text-primary);
+            background: var(--bg-secondary);
+            -webkit-font-smoothing: antialiased;
         }
-        
-        .container {
-            max-width: 900px;
-            margin: 0 auto;
-            padding: 20px;
-            background: white;
-            min-height: 100vh;
-        }
-        
-        header {
-            background: linear-gradient(135deg, #059669 0%, #047857 100%);
+
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(135deg, #059669 0%, #047857 50%, #065f46 100%);
             color: white;
-            padding: 40px 20px;
-            margin: -20px -20px 40px -20px;
-            border-radius: 0 0 16px 16px;
+            padding: 60px 20px 40px;
+            position: relative;
+            overflow: hidden;
         }
-        
-        header h1 {
-            font-size: 2em;
-            margin-bottom: 10px;
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.05'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+            opacity: 0.5;
         }
-        
-        .meta-info {
-            font-size: 0.9em;
-            opacity: 0.95;
-            margin-top: 15px;
+
+        .hero-content {
+            max-width: 800px;
+            margin: 0 auto;
+            text-align: center;
+            position: relative;
+            z-index: 1;
         }
-        
-        .meta-info p {
-            margin: 5px 0;
-        }
-        
-        nav {
-            background: #f3f4f6;
-            padding: 15px;
-            margin-bottom: 30px;
-            border-radius: 8px;
-            position: sticky;
-            top: 20px;
-            z-index: 100;
-        }
-        
-        nav a {
-            color: #059669;
-            text-decoration: none;
-            margin-right: 20px;
-            font-size: 0.9em;
-            transition: color 0.3s;
-        }
-        
-        nav a:hover {
-            color: #047857;
-            text-decoration: underline;
-        }
-        
-        .key-point {
-            background: #ecfdf5;
-            border-left: 4px solid #10b981;
-            padding: 20px;
-            margin: 30px 0;
-            border-radius: 0 8px 8px 0;
-        }
-        
-        .key-point strong {
-            color: #047857;
-        }
-        
-        h2 {
-            color: #059669;
-            font-size: 1.8em;
-            margin-top: 50px;
+
+        .hero-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            background: rgba(255, 255, 255, 0.2);
+            backdrop-filter: blur(10px);
+            padding: 8px 16px;
+            border-radius: 100px;
+            font-size: 0.875rem;
+            font-weight: 500;
             margin-bottom: 20px;
-            padding-bottom: 10px;
-            border-bottom: 3px solid #d1fae5;
         }
-        
-        h3 {
-            color: #047857;
-            font-size: 1.3em;
-            margin-top: 30px;
-            margin-bottom: 15px;
+
+        .hero h1 {
+            font-size: clamp(2rem, 5vw, 2.5rem);
+            font-weight: 800;
+            margin-bottom: 16px;
+            letter-spacing: -0.02em;
         }
-        
-        h4 {
-            color: #065f46;
-            font-size: 1.1em;
+
+        .hero-meta {
+            display: flex;
+            justify-content: center;
+            gap: 24px;
+            flex-wrap: wrap;
+            font-size: 0.875rem;
+            opacity: 0.9;
             margin-top: 20px;
-            margin-bottom: 10px;
         }
-        
-        p {
-            margin: 15px 0;
-            line-height: 1.8;
+
+        .hero-meta span {
+            display: flex;
+            align-items: center;
+            gap: 6px;
         }
-        
-        ul, ol {
-            margin: 15px 0 15px 30px;
-            line-height: 1.8;
+
+        /* Navigation */
+        .nav-bar {
+            background: var(--bg-secondary);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            border-bottom: 1px solid var(--border);
         }
-        
-        li {
-            margin: 8px 0;
+
+        .nav-content {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 4px;
+            padding: 8px 24px;
+            overflow-x: auto;
+            -webkit-overflow-scrolling: touch;
+            scrollbar-width: none;
         }
-        
-        .highlight-box {
-            background: #fef3c7;
-            border: 2px solid #fbbf24;
+
+        .nav-content::-webkit-scrollbar {
+            display: none;
+        }
+
+        .nav-link {
+            padding: 10px 14px;
+            color: var(--text-secondary);
+            text-decoration: none;
+            font-size: 0.875rem;
+            font-weight: 500;
+            white-space: nowrap;
+            border-radius: var(--radius-sm);
+            transition: all 0.2s ease;
+        }
+
+        .nav-link:hover {
+            color: var(--primary);
+            background: white;
+        }
+
+        .nav-link.active {
+            color: var(--primary);
+            background: white;
+            box-shadow: var(--shadow-sm);
+        }
+
+        .nav-back {
+            display: flex;
+            align-items: center;
+            gap: 4px;
+            padding: 10px 14px;
+            color: var(--text-secondary);
+            text-decoration: none;
+            font-size: 0.875rem;
+            font-weight: 500;
+            border-radius: var(--radius-sm);
+            transition: all 0.2s ease;
+        }
+
+        .nav-back:hover {
+            color: var(--primary);
+            background: white;
+        }
+
+        .nav-divider {
+            width: 1px;
+            height: 20px;
+            background: var(--border);
+            margin: 0 8px;
+        }
+
+        /* Main Content */
+        .main-content {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 40px 24px 80px;
+        }
+
+        /* Privacy Highlight */
+        .privacy-highlight {
+            background: linear-gradient(135deg, var(--primary-light) 0%, #ecfdf5 100%);
+            border: 2px solid var(--primary);
+            border-radius: var(--radius-lg);
+            padding: 28px;
+            margin-bottom: 32px;
+            text-align: center;
+        }
+
+        .privacy-highlight-icon {
+            font-size: 3rem;
+            margin-bottom: 16px;
+        }
+
+        .privacy-highlight h2 {
+            color: var(--primary-dark);
+            font-size: 1.25rem;
+            margin-bottom: 12px;
+        }
+
+        .privacy-highlight p {
+            color: var(--text-secondary);
+            font-size: 1rem;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        /* Summary Grid */
+        .summary-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 16px;
+            margin-bottom: 40px;
+        }
+
+        .summary-card {
+            background: white;
+            border-radius: var(--radius-md);
             padding: 20px;
-            margin: 25px 0;
-            border-radius: 8px;
+            border: 1px solid var(--border);
         }
-        
-        .highlight-box h3 {
-            color: #92400e;
+
+        .summary-card h3 {
+            font-size: 0.875rem;
+            color: var(--text-primary);
+            margin-bottom: 12px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .summary-card ul {
+            list-style: none;
+            font-size: 0.8125rem;
+            color: var(--text-secondary);
+        }
+
+        .summary-card li {
+            padding: 6px 0;
+            padding-left: 20px;
+            position: relative;
+        }
+
+        .summary-card.positive li::before {
+            content: '✓';
+            position: absolute;
+            left: 0;
+            color: var(--primary);
+            font-weight: bold;
+        }
+
+        .summary-card.negative li::before {
+            content: '✗';
+            position: absolute;
+            left: 0;
+            color: #ef4444;
+            font-weight: bold;
+        }
+
+        /* Section */
+        .section {
+            margin-bottom: 16px;
+        }
+
+        .section-card {
+            background: white;
+            border-radius: var(--radius-md);
+            border: 1px solid var(--border);
+            overflow: hidden;
+            transition: all 0.2s ease;
+        }
+
+        .section-card:hover {
+            border-color: var(--primary);
+        }
+
+        .section-header {
+            padding: 18px 24px;
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background: white;
+            transition: background 0.2s ease;
+        }
+
+        .section-header:hover {
+            background: var(--bg-secondary);
+        }
+
+        .section-title {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .section-icon {
+            width: 36px;
+            height: 36px;
+            background: var(--primary-light);
+            border-radius: var(--radius-sm);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.125rem;
+        }
+
+        .section-title h2 {
+            font-size: 1rem;
+            font-weight: 600;
+            color: var(--text-primary);
+        }
+
+        .section-toggle {
+            width: 28px;
+            height: 28px;
+            border-radius: 50%;
+            background: var(--bg-tertiary);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1rem;
+            color: var(--text-secondary);
+            transition: all 0.3s ease;
+            flex-shrink: 0;
+        }
+
+        .section-card.open .section-toggle {
+            background: var(--primary);
+            color: white;
+            transform: rotate(45deg);
+        }
+
+        .section-body {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease;
+        }
+
+        .section-card.open .section-body {
+            max-height: 3000px;
+        }
+
+        .section-content {
+            padding: 0 24px 24px;
+            color: var(--text-secondary);
+            line-height: 1.8;
+        }
+
+        .section-content h3 {
+            color: var(--text-primary);
+            font-size: 0.9375rem;
+            font-weight: 600;
+            margin: 20px 0 10px;
+        }
+
+        .section-content h3:first-child {
             margin-top: 0;
         }
-        
-        .check-list {
-            list-style: none;
-            margin-left: 0;
+
+        .section-content h4 {
+            color: var(--text-primary);
+            font-size: 0.875rem;
+            font-weight: 600;
+            margin: 16px 0 8px;
         }
-        
-        .check-list li:before {
-            content: "✅ ";
-            margin-right: 8px;
+
+        .section-content p {
+            margin: 10px 0;
         }
-        
-        .cross-list {
-            list-style: none;
-            margin-left: 0;
+
+        .section-content ul,
+        .section-content ol {
+            margin: 10px 0 10px 20px;
         }
-        
-        .cross-list li:before {
-            content: "❌ ";
-            margin-right: 8px;
+
+        .section-content li {
+            margin: 6px 0;
         }
-        
-        .section {
-            margin: 40px 0;
-        }
-        
-        hr {
-            border: none;
-            border-top: 2px solid #e5e7eb;
-            margin: 40px 0;
-        }
-        
-        .summary-box {
-            background: linear-gradient(135deg, #ecfdf5 0%, #d1fae5 100%);
-            padding: 30px;
-            margin: 40px 0;
-            border-radius: 12px;
-            border: 2px solid #10b981;
-        }
-        
-        .summary-box h3 {
-            color: #047857;
-            margin-top: 15px;
-        }
-        
-        .contact-box {
-            background: #eff6ff;
-            padding: 25px;
-            border-radius: 8px;
-            margin: 30px 0;
-            border-left: 4px solid #3b82f6;
-        }
-        
-        .contact-box a {
-            color: #2563eb;
+
+        .section-content a {
+            color: var(--primary);
             text-decoration: none;
+            font-weight: 500;
         }
-        
-        .contact-box a:hover {
+
+        .section-content a:hover {
             text-decoration: underline;
         }
-        
-        footer {
-            margin-top: 60px;
-            padding-top: 30px;
-            border-top: 2px solid #e5e7eb;
-            text-align: center;
-            color: #6b7280;
-            font-size: 0.9em;
+
+        /* Lists */
+        .check-list {
+            list-style: none;
+            margin-left: 0 !important;
         }
-        
+
+        .check-list li {
+            padding-left: 24px;
+            position: relative;
+        }
+
+        .check-list li::before {
+            content: '✓';
+            position: absolute;
+            left: 0;
+            color: var(--primary);
+            font-weight: bold;
+        }
+
+        .cross-list {
+            list-style: none;
+            margin-left: 0 !important;
+        }
+
+        .cross-list li {
+            padding-left: 24px;
+            position: relative;
+        }
+
+        .cross-list li::before {
+            content: '✗';
+            position: absolute;
+            left: 0;
+            color: #ef4444;
+            font-weight: bold;
+        }
+
+        /* Alert Boxes */
+        .alert-box {
+            padding: 16px 20px;
+            border-radius: var(--radius-sm);
+            margin: 16px 0;
+        }
+
+        .alert-box.warning {
+            background: var(--accent-light);
+            border-left: 4px solid var(--accent);
+        }
+
+        .alert-box.info {
+            background: var(--secondary-light);
+            border-left: 4px solid var(--secondary);
+        }
+
+        .alert-box.success {
+            background: var(--primary-light);
+            border-left: 4px solid var(--primary);
+        }
+
+        .alert-box h4 {
+            color: var(--text-primary);
+            font-size: 0.875rem;
+            margin-bottom: 8px;
+        }
+
+        .alert-box p {
+            margin: 0;
+        }
+
+        /* Promise Section */
+        .promise-section {
+            background: linear-gradient(135deg, var(--primary-light) 0%, #ecfdf5 100%);
+            border: 2px solid var(--primary);
+            border-radius: var(--radius-lg);
+            padding: 28px;
+            margin: 32px 0;
+        }
+
+        .promise-section h2 {
+            color: var(--primary-dark);
+            font-size: 1.25rem;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+
+        .promise-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+            gap: 24px;
+        }
+
+        .promise-item h3 {
+            font-size: 0.9375rem;
+            color: var(--primary-dark);
+            margin-bottom: 12px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .promise-item ol {
+            list-style: none;
+            counter-reset: promise;
+            font-size: 0.875rem;
+            color: var(--text-secondary);
+        }
+
+        .promise-item li {
+            counter-increment: promise;
+            padding: 6px 0 6px 28px;
+            position: relative;
+        }
+
+        .promise-item li::before {
+            content: counter(promise);
+            position: absolute;
+            left: 0;
+            width: 20px;
+            height: 20px;
+            background: var(--primary);
+            color: white;
+            border-radius: 50%;
+            font-size: 0.75rem;
+            font-weight: 600;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .promise-item.negative li::before {
+            background: #ef4444;
+        }
+
+        /* Contact Section */
+        .contact-section {
+            background: linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 100%);
+            border-radius: var(--radius-xl);
+            padding: 40px 32px;
+            text-align: center;
+            color: white;
+            margin-top: 40px;
+        }
+
+        .contact-section h2 {
+            font-size: 1.5rem;
+            font-weight: 700;
+            margin-bottom: 12px;
+        }
+
+        .contact-section p {
+            opacity: 0.95;
+            margin-bottom: 8px;
+        }
+
+        .contact-email {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            background: rgba(255, 255, 255, 0.2);
+            backdrop-filter: blur(10px);
+            padding: 14px 28px;
+            border-radius: 100px;
+            color: white;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 1rem;
+            margin-top: 16px;
+            transition: all 0.2s ease;
+        }
+
+        .contact-email:hover {
+            background: rgba(255, 255, 255, 0.3);
+            transform: translateY(-2px);
+        }
+
+        /* Footer */
+        .footer {
+            background: white;
+            border-top: 1px solid var(--border);
+            padding: 32px 24px;
+            text-align: center;
+            margin-top: 60px;
+        }
+
+        .footer-meta {
+            display: flex;
+            justify-content: center;
+            gap: 24px;
+            flex-wrap: wrap;
+            font-size: 0.875rem;
+            color: var(--text-secondary);
+            margin-bottom: 20px;
+        }
+
+        .footer-links {
+            display: flex;
+            justify-content: center;
+            gap: 24px;
+            flex-wrap: wrap;
+            margin-bottom: 20px;
+        }
+
+        .footer-links a {
+            color: var(--text-secondary);
+            text-decoration: none;
+            font-size: 0.875rem;
+            transition: color 0.2s ease;
+        }
+
+        .footer-links a:hover {
+            color: var(--primary);
+        }
+
+        .footer-copyright {
+            color: var(--text-muted);
+            font-size: 0.8125rem;
+        }
+
+        /* Back to Top */
         .back-to-top {
             position: fixed;
-            bottom: 30px;
-            right: 30px;
-            background: #059669;
+            bottom: 24px;
+            right: 24px;
+            width: 48px;
+            height: 48px;
+            background: var(--primary);
             color: white;
-            width: 50px;
-            height: 50px;
             border-radius: 50%;
             display: flex;
             align-items: center;
             justify-content: center;
             text-decoration: none;
-            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
-            transition: all 0.3s;
+            box-shadow: var(--shadow-lg);
+            transition: all 0.3s ease;
+            opacity: 0;
+            visibility: hidden;
+            z-index: 99;
         }
-        
+
+        .back-to-top.visible {
+            opacity: 1;
+            visibility: visible;
+        }
+
         .back-to-top:hover {
-            background: #047857;
-            transform: translateY(-3px);
-            box-shadow: 0 6px 12px rgba(0,0,0,0.15);
+            background: var(--primary-dark);
+            transform: translateY(-4px);
         }
-        
-        @media print {
-            .container {
-                max-width: 100%;
+
+        /* Responsive */
+        @media (max-width: 640px) {
+            .hero {
+                padding: 40px 20px 30px;
+            }
+
+            .hero h1 {
+                font-size: 1.75rem;
+            }
+
+            .hero-meta {
+                flex-direction: column;
+                gap: 8px;
+            }
+
+            .nav-content {
+                justify-content: flex-start;
+                padding: 8px 16px;
+            }
+
+            .nav-link, .nav-back {
+                padding: 8px 10px;
+                font-size: 0.8125rem;
+            }
+
+            .main-content {
+                padding: 24px 16px 60px;
+            }
+
+            .privacy-highlight {
                 padding: 20px;
             }
-            
-            header {
-                background: #059669;
-                print-color-adjust: exact;
-                -webkit-print-color-adjust: exact;
+
+            .summary-grid {
+                grid-template-columns: 1fr;
             }
-            
-            nav, .back-to-top {
-                display: none;
+
+            .section-header {
+                padding: 14px 16px;
+            }
+
+            .section-content {
+                padding: 0 16px 16px;
+            }
+
+            .section-title h2 {
+                font-size: 0.9375rem;
+            }
+
+            .promise-section {
+                padding: 20px;
+            }
+
+            .promise-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .contact-section {
+                padding: 32px 20px;
+                border-radius: var(--radius-lg);
+            }
+
+            .back-to-top {
+                bottom: 16px;
+                right: 16px;
+                width: 44px;
+                height: 44px;
             }
         }
-        
-        @media (max-width: 768px) {
-            body {
-                font-size: 16px;
+
+        @media print {
+            .nav-bar, .back-to-top {
+                display: none;
             }
             
-            .container {
-                padding: 15px;
+            .section-card {
+                break-inside: avoid;
             }
             
-            header {
-                margin: -15px -15px 30px -15px;
-                padding: 30px 15px;
-            }
-            
-            header h1 {
-                font-size: 1.5em;
-            }
-            
-            h2 {
-                font-size: 1.4em;
-            }
-            
-            nav {
-                position: relative;
-                top: 0;
-            }
-            
-            nav a {
-                display: block;
-                margin: 10px 0;
-            }
-            
-            .back-to-top {
-                bottom: 20px;
-                right: 20px;
-                width: 45px;
-                height: 45px;
+            .section-body {
+                max-height: none !important;
             }
         }
     </style>
 </head>
 <body>
-    <div class="container">
-        <header>
+    <!-- Hero Section -->
+    <header class="hero">
+        <div class="hero-content">
+            <div class="hero-badge">
+                <span>🔒</span>
+                <span>Privacy First</span>
+            </div>
             <h1>Privacy Policy</h1>
-            <p style="font-size: 1.2em; margin-top: 10px;">Junior Kickers Journey</p>
-            <div class="meta-info">
-                <p><strong>Effective Date:</strong> November 1, 2025</p>
-                <p><strong>Last Updated:</strong> October 26, 2025</p>
-                <p><strong>Version:</strong> 1.0</p>
+            <p style="opacity: 0.95;">Your privacy is our priority. Learn how we protect your data.</p>
+            <div class="hero-meta">
+                <span>📅 Effective: November 1, 2025</span>
+                <span>🔄 Updated: January 22, 2026</span>
+                <span>📋 Version 1.1</span>
             </div>
-        </header>
+        </div>
+    </header>
 
-        <nav>
-            <a href="index.html">← Back to Home</a>
-            <a href="#introduction">Introduction</a>
-            <a href="#collection">Data Collection</a>
-            <a href="#rights">Your Rights</a>
-            <a href="#contact">Contact</a>
-        </nav>
+    <!-- Navigation -->
+    <nav class="nav-bar">
+        <div class="nav-content">
+            <a href="index.html" class="nav-back">← Home</a>
+            <div class="nav-divider"></div>
+            <a href="#overview" class="nav-link">Overview</a>
+            <a href="#policy" class="nav-link">Policy</a>
+            <a href="#rights" class="nav-link">Your Rights</a>
+            <a href="#contact" class="nav-link">Contact</a>
+        </div>
+    </nav>
 
-        <section id="introduction" class="section">
-            <h2>Introduction</h2>
-            <p>Junior Kickers Journey ("we", "our", or "the App") is committed to protecting your privacy. This Privacy Policy explains how our mobile application handles information when you use our service.</p>
-            
-            <div class="key-point">
-                <p><strong>Key Point:</strong> Junior Kickers Journey is designed with <strong>privacy first</strong>. We do NOT collect, store, transmit, or share any of your personal data. All information you enter stays on your device.</p>
+    <!-- Main Content -->
+    <main class="main-content">
+        <!-- Privacy Highlight -->
+        <section id="overview" class="privacy-highlight">
+            <div class="privacy-highlight-icon">🛡️</div>
+            <h2>Zero Data Collection</h2>
+            <p>Junior Kickers Journey is designed with <strong>privacy first</strong>. We do NOT collect, store, transmit, or share any of your personal data. All information you enter stays on your device and under your complete control.</p>
+        </section>
+
+        <!-- Summary Grid -->
+        <div class="summary-grid">
+            <div class="summary-card positive">
+                <h3>✅ What Stays on Your Device</h3>
+                <ul>
+                    <li>Player profiles & settings</li>
+                    <li>Training session logs</li>
+                    <li>Match records & statistics</li>
+                    <li>Achievements & progress</li>
+                    <li>Photos & videos</li>
+                </ul>
+            </div>
+            <div class="summary-card negative">
+                <h3>❌ What We Never Collect</h3>
+                <ul>
+                    <li>Personal information</li>
+                    <li>Location or GPS data</li>
+                    <li>Usage analytics</li>
+                    <li>Device identifiers</li>
+                    <li>Any tracking data</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Policy Sections -->
+        <div id="policy">
+            <!-- Section: Information Collection -->
+            <div class="section">
+                <div class="section-card open">
+                    <div class="section-header">
+                        <div class="section-title">
+                            <span class="section-icon">📊</span>
+                            <h2>Information Collection and Storage</h2>
+                        </div>
+                        <span class="section-toggle">+</span>
+                    </div>
+                    <div class="section-body">
+                        <div class="section-content">
+                            <h3>What We DON'T Collect</h3>
+                            <p>Junior Kickers Journey <strong>does NOT collect or access</strong>:</p>
+                            <ul class="cross-list">
+                                <li>Personal information (names, email addresses, phone numbers)</li>
+                                <li>Account credentials (no user accounts exist)</li>
+                                <li>Location data or GPS coordinates</li>
+                                <li>Device identifiers or tracking information</li>
+                                <li>Usage analytics or behavioral data</li>
+                                <li>Crash reports or diagnostic information</li>
+                                <li>Payment or financial information</li>
+                                <li>Social media profiles or connections</li>
+                                <li>Contacts or address book data</li>
+                            </ul>
+
+                            <h3>What Stays on Your Device</h3>
+                            <p>All information you enter remains <strong>locally stored on your device</strong>:</p>
+                            <ul class="check-list">
+                                <li>Player profiles (child's name, date of birth, positions)</li>
+                                <li>Training session logs (dates, durations, notes, ratings)</li>
+                                <li>Match records (opponents, scores, statistics, performance)</li>
+                                <li>Skill assessments (ratings and progress)</li>
+                                <li>Achievement data (badges earned, progress)</li>
+                                <li>Media files (photos/videos in app's private storage)</li>
+                                <li>App settings and preferences</li>
+                            </ul>
+
+                            <div class="alert-box info">
+                                <h4>📸 Media File Handling</h4>
+                                <p>When you attach photos or videos, the app creates optimized copies in its private storage. Original files in your gallery remain untouched. Photos are automatically compressed to save space. These copies are deleted when you remove them or uninstall the app.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Section: How We Use Information -->
+            <div class="section">
+                <div class="section-card">
+                    <div class="section-header">
+                        <div class="section-title">
+                            <span class="section-icon">⚙️</span>
+                            <h2>How Information is Used</h2>
+                        </div>
+                        <span class="section-toggle">+</span>
+                    </div>
+                    <div class="section-body">
+                        <div class="section-content">
+                            <p>Since all data stays on your device, we do not "use" your information in any way. You have complete control over:</p>
+                            <ul class="check-list">
+                                <li>Creating and editing player profiles</li>
+                                <li>Logging training sessions and matches</li>
+                                <li>Viewing progress and analytics</li>
+                                <li>Managing achievements and media</li>
+                                <li>Exporting reports (PDFs generated locally)</li>
+                                <li>Sharing achievements (your choice via device sharing)</li>
+                                <li>Deleting data (complete control)</li>
+                            </ul>
+                            <p>All data processing happens <strong>locally on your device</strong>. No information is sent to our servers or any third parties.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Section: Data Sharing -->
+            <div class="section">
+                <div class="section-card">
+                    <div class="section-header">
+                        <div class="section-title">
+                            <span class="section-icon">🔗</span>
+                            <h2>Data Sharing and Disclosure</h2>
+                        </div>
+                        <span class="section-toggle">+</span>
+                    </div>
+                    <div class="section-body">
+                        <div class="section-content">
+                            <p><strong>We do NOT share your data with anyone</strong> because we never have access to your data.</p>
+                            <ul class="cross-list">
+                                <li>No data transmission to our servers</li>
+                                <li>No sharing with third parties</li>
+                                <li>No selling of information</li>
+                                <li>No advertising networks or trackers</li>
+                                <li>No analytics services</li>
+                                <li>No social media integration</li>
+                            </ul>
+
+                            <h3>Your Sharing Choices</h3>
+                            <p>You may optionally choose to share using your device's native sharing:</p>
+                            <ul>
+                                <li>Share achievement celebrations via social media, messaging, or email</li>
+                                <li>Export PDF progress reports and share with coaches or family</li>
+                                <li>Take screenshots and share them</li>
+                            </ul>
+                            <p><strong>These are YOUR choices</strong>. We do not automatically share anything.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Section: Data Security -->
+            <div class="section">
+                <div class="section-card">
+                    <div class="section-header">
+                        <div class="section-title">
+                            <span class="section-icon">🔐</span>
+                            <h2>Data Security</h2>
+                        </div>
+                        <span class="section-toggle">+</span>
+                    </div>
+                    <div class="section-body">
+                        <div class="section-content">
+                            <h3>Local Device Security</h3>
+                            <p>Since all data is stored locally, security depends on your device's measures:</p>
+                            <ul>
+                                <li><strong>Device Encryption:</strong> Data uses iOS/Android system encryption</li>
+                                <li><strong>Device Lock:</strong> Protect with passcode, PIN, or biometric authentication</li>
+                            </ul>
+
+                            <h3>Our Security Approach</h3>
+                            <ul class="check-list">
+                                <li>No network communication = no data interception risk</li>
+                                <li>No user accounts = no account breach risk</li>
+                                <li>No cloud storage = no cloud security concerns</li>
+                                <li>No third-party services = no third-party vulnerabilities</li>
+                            </ul>
+
+                            <h3>Your Responsibility</h3>
+                            <p>To keep your data secure:</p>
+                            <ul class="check-list">
+                                <li>Use a strong device lock (passcode, biometric)</li>
+                                <li>Keep your device's operating system updated</li>
+                                <li>Don't share your device with unauthorized users</li>
+                                <li>Back up your device regularly (optional)</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Section: Children's Privacy -->
+            <div class="section">
+                <div class="section-card">
+                    <div class="section-header">
+                        <div class="section-title">
+                            <span class="section-icon">👶</span>
+                            <h2>Children's Privacy</h2>
+                        </div>
+                        <span class="section-toggle">+</span>
+                    </div>
+                    <div class="section-body">
+                        <div class="section-content">
+                            <p>Junior Kickers Journey is designed for parents to track their children's soccer development (typically ages 6-12). We are committed to protecting children's privacy.</p>
+                            
+                            <h3>COPPA Compliance</h3>
+                            <p>Since our app:</p>
+                            <ul class="cross-list">
+                                <li>Does NOT collect any personal information</li>
+                                <li>Does NOT transmit any data online</li>
+                                <li>Does NOT require registration or user accounts</li>
+                                <li>Does NOT have social features or community interaction</li>
+                            </ul>
+                            <p>We do NOT collect "personal information" from children as defined by COPPA.</p>
+
+                            <h3>Parental Control</h3>
+                            <ul class="check-list">
+                                <li>Parents control ALL data entry</li>
+                                <li>Parents decide what information to record</li>
+                                <li>Parents control data viewing and deletion</li>
+                                <li>Parents decide if/when to share information externally</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Section: Data Retention -->
+            <div class="section">
+                <div class="section-card">
+                    <div class="section-header">
+                        <div class="section-title">
+                            <span class="section-icon">🗑️</span>
+                            <h2>Data Retention and Deletion</h2>
+                        </div>
+                        <span class="section-toggle">+</span>
+                    </div>
+                    <div class="section-body">
+                        <div class="section-content">
+                            <h3>How Long Data is Stored</h3>
+                            <p>Data remains on your device until YOU decide to delete it:</p>
+                            <ul>
+                                <li>Individual activities can be deleted anytime</li>
+                                <li>Player profiles can be edited or deleted</li>
+                                <li>Media attachments can be removed</li>
+                                <li>Uninstalling the app deletes all data</li>
+                            </ul>
+
+                            <h3>How to Delete Your Data</h3>
+                            <p><strong>Delete Individual Items:</strong> Navigate to the item and use the delete function.</p>
+                            <p><strong>Delete All Data:</strong> Uninstall the app from your device.</p>
+
+                            <div class="alert-box warning">
+                                <h4>⚠️ Important</h4>
+                                <p>Once deleted, data CANNOT be recovered (unless you have a device backup). We have no copies of your data.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Section: Your Rights -->
+            <div class="section" id="rights">
+                <div class="section-card">
+                    <div class="section-header">
+                        <div class="section-title">
+                            <span class="section-icon">⚖️</span>
+                            <h2>Your Rights and Control</h2>
+                        </div>
+                        <span class="section-toggle">+</span>
+                    </div>
+                    <div class="section-body">
+                        <div class="section-content">
+                            <p>Since all data stays on your device, you have <strong>complete control</strong>:</p>
+                            
+                            <h3>You Have the Right To:</h3>
+                            <ul class="check-list">
+                                <li><strong>Access:</strong> View all your data anytime within the app</li>
+                                <li><strong>Modify:</strong> Edit any information you've entered</li>
+                                <li><strong>Delete:</strong> Remove any or all data at any time</li>
+                                <li><strong>Export:</strong> Generate PDF reports of your data</li>
+                                <li><strong>Control:</strong> Decide what to track and what to share</li>
+                                <li><strong>Privacy:</strong> Keep all information completely private</li>
+                            </ul>
+
+                            <h3>No Need to Request</h3>
+                            <p>Since we never have access to your data, you don't need to request data access, correction, deletion, or portability—you already have full control within the app.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Section: Device Permissions -->
+            <div class="section">
+                <div class="section-card">
+                    <div class="section-header">
+                        <div class="section-title">
+                            <span class="section-icon">📱</span>
+                            <h2>Device Permissions</h2>
+                        </div>
+                        <span class="section-toggle">+</span>
+                    </div>
+                    <div class="section-body">
+                        <div class="section-content">
+                            <p>Junior Kickers Journey requests minimal device permissions:</p>
+                            
+                            <h3>Permissions We Request</h3>
+                            
+                            <h4>📷 Camera Access (Optional)</h4>
+                            <ul>
+                                <li><strong>Purpose:</strong> Take photos/videos directly in the app</li>
+                                <li><strong>Usage:</strong> Only active when you choose to take a photo</li>
+                                <li><strong>No Background Access:</strong> Never accessed without your action</li>
+                                <li><strong>Opt-Out:</strong> You can deny and still use gallery selection</li>
+                            </ul>
+
+                            <h4>🖼️ Photo Library Access (Optional)</h4>
+                            <ul>
+                                <li><strong>Purpose:</strong> Select existing photos/videos from your gallery</li>
+                                <li><strong>Usage:</strong> We only access media YOU specifically select</li>
+                                <li><strong>Privacy:</strong> Original files remain unchanged in your gallery</li>
+                                <li><strong>Opt-Out:</strong> You can deny and still use the camera</li>
+                            </ul>
+
+                            <h3>Permissions We DON'T Request</h3>
+                            <ul class="cross-list">
+                                <li>Internet/Network access (app is offline-only)</li>
+                                <li>Location services</li>
+                                <li>Contacts access</li>
+                                <li>Microphone access</li>
+                                <li>Phone call access</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Section: Third-Party Services -->
+            <div class="section">
+                <div class="section-card">
+                    <div class="section-header">
+                        <div class="section-title">
+                            <span class="section-icon">🔌</span>
+                            <h2>Third-Party Services</h2>
+                        </div>
+                        <span class="section-toggle">+</span>
+                    </div>
+                    <div class="section-body">
+                        <div class="section-content">
+                            <h3>Services We DO NOT Use</h3>
+                            <ul class="cross-list">
+                                <li>Analytics services (Google Analytics, Firebase, etc.)</li>
+                                <li>Crash reporting services (Crashlytics, Sentry, etc.)</li>
+                                <li>Advertising networks or trackers</li>
+                                <li>Cloud storage services</li>
+                                <li>Social media platforms (direct integration)</li>
+                                <li>Third-party authentication</li>
+                            </ul>
+
+                            <h3>Platform Distribution</h3>
+                            <p>The app is distributed through:</p>
+                            <ul>
+                                <li><strong>Apple App Store</strong> (iOS): Subject to Apple's privacy policy</li>
+                                <li><strong>Google Play Store</strong> (Android): Subject to Google's privacy policy</li>
+                            </ul>
+                            <p>These platforms may collect download information according to their own policies. We do not have access to this information.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Section: Legal Compliance -->
+            <div class="section">
+                <div class="section-card">
+                    <div class="section-header">
+                        <div class="section-title">
+                            <span class="section-icon">📜</span>
+                            <h2>Legal Compliance</h2>
+                        </div>
+                        <span class="section-toggle">+</span>
+                    </div>
+                    <div class="section-body">
+                        <div class="section-content">
+                            <h3>CCPA (California)</h3>
+                            <p>Since we do not collect, sell, or share personal information, CCPA data rights do not apply—there's no data to access, delete, or opt-out of.</p>
+
+                            <h3>GDPR (European Union)</h3>
+                            <p>Since we do not collect or process personal data, GDPR rights are inherently protected—all data stays on your device under your control.</p>
+
+                            <h3>International Users</h3>
+                            <p>Junior Kickers Journey can be used anywhere. Since all data stays on your device:</p>
+                            <ul class="check-list">
+                                <li>No cross-border data transfers</li>
+                                <li>No data residency concerns</li>
+                                <li>No regional privacy law concerns</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Section: Policy Changes -->
+            <div class="section">
+                <div class="section-card">
+                    <div class="section-header">
+                        <div class="section-title">
+                            <span class="section-icon">📝</span>
+                            <h2>Changes to This Policy</h2>
+                        </div>
+                        <span class="section-toggle">+</span>
+                    </div>
+                    <div class="section-body">
+                        <div class="section-content">
+                            <p>We may update this Privacy Policy to reflect changes in legal requirements, new features, or improvements to privacy practices.</p>
+
+                            <h3>How We Notify You</h3>
+                            <ul>
+                                <li>Updated policy will be posted in the app</li>
+                                <li>"Last Updated" date will be changed</li>
+                                <li>Significant changes will be highlighted in app update notes</li>
+                            </ul>
+
+                            <p>By continuing to use the app after changes, you accept the updated policy.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Our Privacy Promise -->
+        <section class="promise-section">
+            <h2>🛡️ Our Privacy Promise</h2>
+            <div class="promise-grid">
+                <div class="promise-item">
+                    <h3>✅ What We Promise</h3>
+                    <ol>
+                        <li><strong>Zero Data Collection:</strong> We never collect your information</li>
+                        <li><strong>Complete Privacy:</strong> All data stays on your device</li>
+                        <li><strong>No Tracking:</strong> We don't track usage or behavior</li>
+                        <li><strong>No Sharing:</strong> We never share your information</li>
+                        <li><strong>Full Control:</strong> You own 100% of your data</li>
+                        <li><strong>Transparency:</strong> We're open about our practices</li>
+                    </ol>
+                </div>
+                <div class="promise-item negative">
+                    <h3>❌ What We'll Never Do</h3>
+                    <ol>
+                        <li>Collect your personal information</li>
+                        <li>Send your data to our servers</li>
+                        <li>Share your data with third parties</li>
+                        <li>Sell your information</li>
+                        <li>Track you with analytics</li>
+                        <li>Show you targeted ads</li>
+                    </ol>
+                </div>
             </div>
         </section>
 
-        <hr>
+        <!-- Contact Section -->
+        <section id="contact" class="contact-section">
+            <h2>Questions About Privacy?</h2>
+            <p>We're happy to explain our privacy practices</p>
+            <a href="mailto:sjuniorkickers@gmail.com" class="contact-email">
+                <span>✉️</span>
+                <span>sjuniorkickers@gmail.com</span>
+            </a>
+            <p style="margin-top: 16px; font-size: 0.875rem; opacity: 0.8;">Response time: Within 48-72 hours</p>
+        </section>
+    </main>
 
-        <section id="collection" class="section">
-            <h2>Information Collection and Storage</h2>
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-meta">
+            <span>📱 iOS 15.1+ & Android 7.0+</span>
+            <span>📋 Version 1.1</span>
+            <span>📅 Effective: November 1, 2025</span>
+        </div>
+        <div class="footer-links">
+            <a href="index.html">Home</a>
+            <a href="terms-of-service.html">Terms of Service</a>
+            <a href="support.html">Support</a>
+        </div>
+        <p class="footer-copyright">© 2025 Junior Kickers Journey. All rights reserved.</p>
+    </footer>
+
+    <!-- Back to Top Button -->
+    <a href="#" class="back-to-top" id="backToTop" title="Back to top">↑</a>
+
+    <script>
+        // Accordion functionality
+        document.querySelectorAll('.section-header').forEach(header => {
+            header.addEventListener('click', () => {
+                const card = header.closest('.section-card');
+                card.classList.toggle('open');
+            });
+        });
+
+        // Back to top button
+        const backToTop = document.getElementById('backToTop');
+        
+        window.addEventListener('scroll', () => {
+            if (window.pageYOffset > 300) {
+                backToTop.classList.add('visible');
+            } else {
+                backToTop.classList.remove('visible');
+            }
+        });
+
+        // Smooth scroll for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    const offset = 80;
+                    const targetPosition = target.getBoundingClientRect().top + window.pageYOffset - offset;
+                    window.scrollTo({
+                        top: targetPosition,
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+
+        // Update active nav link on scroll
+        const sections = document.querySelectorAll('section[id], div[id]');
+        const navLinks = document.querySelectorAll('.nav-link');
+        
+        window.addEventListener('scroll', () => {
+            let current = '';
             
-            <h3>What We DON'T Collect</h3>
-            <p>Junior Kickers Journey <strong>does NOT collect or access</strong>:</p>
-            <ul class="cross-list">
-                <li>Personal information (names, email addresses, phone numbers)</li>
-                <li>Account credentials (no user accounts exist)</li>
-                <li>Location data or GPS coordinates</li>
-                <li>Device identifiers or tracking information</li>
-                <li>Usage analytics or behavioral data</li>
-                <li>Crash reports or diagnostic information</li>
-                <li>Payment or financial information</li>
-                <li>Social media profiles or connections</li>
-                <li>Contacts or address book data</li>
-                <li>Photos or media files from your device gallery (we create private copies of media you select)</li>
-            </ul>
+            sections.forEach(section => {
+                const sectionTop = section.offsetTop;
+                if (pageYOffset >= sectionTop - 100) {
+                    current = section.getAttribute('id');
+                }
+            });
 
-            <h3>What Stays on Your Device</h3>
-            <p>All information you enter into Junior Kickers Journey remains <strong>locally stored on your device</strong>:</p>
-            <ul class="check-list">
-                <li>Player profiles (child's name, date of birth, positions)</li>
-                <li>Training session logs (dates, durations, notes, ratings)</li>
-                <li>Match records (opponents, scores, statistics, performance)</li>
-                <li>Skill assessments (ratings and progress)</li>
-                <li>Achievement data (badges earned, progress)</li>
-                <li>Media files (photos/videos copied to app's private storage with automatic compression)</li>
-                <li>App settings and preferences</li>
-            </ul>
-
-            <div class="highlight-box">
-                <h4>Important: Media File Handling</h4>
-                <p>When you attach photos or videos to activities, the app creates optimized copies in its private storage directory on your device. Original files in your device gallery remain untouched. Photos are automatically compressed to save storage space while maintaining quality. These copies are only accessible by the app and are deleted if you remove them or uninstall the app.</p>
-            </div>
-        </section>
-
-        <hr>
-
-        <section class="section">
-            <h2>How We Use Information</h2>
-            <p>Since all data stays on your device, we do not "use" your information in any way. You have complete control over:</p>
-            <ul>
-                <li>Creating and editing player profiles</li>
-                <li>Logging training sessions and matches</li>
-                <li>Viewing progress and analytics</li>
-                <li>Managing achievements and media</li>
-                <li>Exporting reports (PDFs generated locally)</li>
-                <li>Deleting data (complete control)</li>
-            </ul>
-            <p>All data processing happens <strong>locally on your device</strong>. No information is sent to our servers or any third parties.</p>
-        </section>
-
-        <hr>
-
-        <section class="section">
-            <h2>Data Sharing and Disclosure</h2>
-            <p><strong>We do NOT share your data with anyone</strong> because we never have access to your data.</p>
-            <ul class="cross-list">
-                <li>No data transmission to our servers</li>
-                <li>No sharing with third parties</li>
-                <li>No selling of information</li>
-                <li>No advertising networks or trackers</li>
-                <li>No analytics services</li>
-                <li>No social media integration (unless you explicitly share via your device's native share function)</li>
-            </ul>
-
-            <h3>Your Sharing Choices</h3>
-            <p>You may optionally choose to share information using your device's native sharing features:</p>
-            <ul>
-                <li>Share achievement celebrations via social media, messaging, or email</li>
-                <li>Export PDF progress reports and share them with coaches, family, or others</li>
-                <li>Take screenshots and share them</li>
-            </ul>
-            <p><strong>These are YOUR choices</strong>. We do not automatically share anything on your behalf.</p>
-        </section>
-
-        <hr>
-
-        <section class="section">
-            <h2>Data Security</h2>
-            
-            <h3>Local Device Security</h3>
-            <p>Since all data is stored locally on your device, security depends on your device's security measures:</p>
-            <ul>
-                <li><strong>Device Encryption:</strong> Data is stored in your device's secure storage (utilizing iOS/Android system encryption)</li>
-                <li><strong>Device Lock:</strong> Protect your device with a passcode, PIN, biometric authentication, or pattern lock</li>
-                <li><strong>App Access:</strong> Optional app lock feature (future enhancement) for additional security</li>
-            </ul>
-
-            <h3>Our Security Measures</h3>
-            <ul>
-                <li>No network communication = no risk of data interception</li>
-                <li>No user accounts = no account breach risk</li>
-                <li>No cloud storage = no cloud security concerns</li>
-                <li>No third-party services = no third-party vulnerabilities</li>
-            </ul>
-
-            <h3>Your Responsibility</h3>
-            <p>To keep your data secure:</p>
-            <ul class="check-list">
-                <li>Use a strong device lock (passcode, biometric)</li>
-                <li>Keep your device's operating system updated</li>
-                <li>Don't share your device with unauthorized users</li>
-                <li>Back up your device regularly (optional)</li>
-            </ul>
-        </section>
-
-        <hr>
-
-        <section class="section">
-            <h2>Children's Privacy</h2>
-            <p>Junior Kickers Journey is designed for parents to track their children's soccer development (typically ages 6-12). We are committed to protecting children's privacy.</p>
-            
-            <h3>COPPA Compliance (Children's Online Privacy Protection Act)</h3>
-            <p>Since our app:</p>
-            <ul>
-                <li>Does NOT collect any personal information</li>
-                <li>Does NOT transmit any data online</li>
-                <li>Does NOT require registration or user accounts</li>
-                <li>Does NOT have social features or community interaction</li>
-            </ul>
-            <p>We do NOT collect "personal information" from children as defined by COPPA. Parents have full control over all data entered into the app.</p>
-
-            <h3>Parental Control</h3>
-            <ul>
-                <li>Parents control ALL data entry</li>
-                <li>Parents decide what information to record</li>
-                <li>Parents control data viewing and deletion</li>
-                <li>Parents decide if/when to share information externally</li>
-            </ul>
-        </section>
-
-        <hr>
-
-        <section class="section">
-            <h2>Data Retention and Deletion</h2>
-            
-            <h3>How Long Data is Stored</h3>
-            <p>Data remains on your device until YOU decide to delete it:</p>
-            <ul>
-                <li>Individual activities (training sessions, matches) can be deleted anytime</li>
-                <li>Player profiles can be edited or deleted</li>
-                <li>Media attachments can be removed</li>
-                <li>The entire app and all data can be deleted by uninstalling the app</li>
-            </ul>
-
-            <h3>How to Delete Your Data</h3>
-            <p><strong>Delete Individual Items:</strong></p>
-            <ul>
-                <li>Navigate to the item (training session, match, player)</li>
-                <li>Use the delete function within the app</li>
-            </ul>
-
-            <p><strong>Delete All Data:</strong></p>
-            <ul>
-                <li>Uninstall the Junior Kickers Journey app from your device</li>
-                <li>This permanently removes all app data from your device</li>
-            </ul>
-
-            <div class="highlight-box">
-                <h4>Important</h4>
-                <p>Once deleted, data CANNOT be recovered (unless you have a device backup). We have no copies of your data.</p>
-            </div>
-        </section>
-
-        <hr>
-
-        <section id="rights" class="section">
-            <h2>Your Rights and Control</h2>
-            <p>Since all data stays on your device, you have <strong>complete control</strong>:</p>
-            
-            <h3>You Have the Right To:</h3>
-            <ul class="check-list">
-                <li><strong>Access:</strong> View all your data anytime within the app</li>
-                <li><strong>Modify:</strong> Edit any information you've entered</li>
-                <li><strong>Delete:</strong> Remove any or all data at any time</li>
-                <li><strong>Export:</strong> Generate PDF reports of your data</li>
-                <li><strong>Control:</strong> Decide what to track and what to share</li>
-                <li><strong>Privacy:</strong> Keep all information completely private</li>
-            </ul>
-
-            <h3>No Need to Request:</h3>
-            <p>Since we never have access to your data, you don't need to request:</p>
-            <ul>
-                <li>Data access (you already have full access)</li>
-                <li>Data correction (you can edit anytime)</li>
-                <li>Data deletion (you can delete anytime)</li>
-                <li>Data portability (export PDFs locally)</li>
-            </ul>
-        </section>
-
-        <hr>
-
-        <section class="section">
-            <h2>Payments and In-App Purchases</h2>
-            <p>Junior Kickers Journey does NOT collect or process payment information directly.</p>
-            
-            <p><strong>If the app includes paid features or in-app purchases:</strong></p>
-            <ul>
-                <li>All payments are processed through Apple App Store or Google Play Store</li>
-                <li>Payment processing is handled entirely by Apple or Google</li>
-                <li>We do not have access to your payment information (credit card details, billing address, etc.)</li>
-                <li>Refer to Apple's or Google's privacy policies for how they handle payment data</li>
-            </ul>
-            
-            <p><strong>Important:</strong> We never collect, store, or have access to your financial or payment information under any circumstances.</p>
-        </section>
-
-        <hr>
-
-        <section class="section">
-            <h2>Third-Party Services</h2>
-            
-            <h3>Services We DO NOT Use</h3>
-            <p>Junior Kickers Journey does NOT integrate with or use:</p>
-            <ul class="cross-list">
-                <li>Analytics services (Google Analytics, Firebase Analytics, etc.)</li>
-                <li>Crash reporting services (Crashlytics, Sentry, etc.)</li>
-                <li>Advertising networks or trackers</li>
-                <li>Cloud storage services (AWS, Google Cloud, iCloud sync, etc.)</li>
-                <li>Social media platforms (direct integration)</li>
-                <li>Third-party payment processors (payments handled by app stores only)</li>
-                <li>Third-party authentication (no accounts)</li>
-            </ul>
-
-            <h3>Platform Services</h3>
-            <p>The app is distributed through:</p>
-            <ul>
-                <li><strong>Apple App Store</strong> (iOS): Subject to Apple's privacy policy</li>
-                <li><strong>Google Play Store</strong> (Android): Subject to Google's privacy policy</li>
-            </ul>
-            <p>These platforms may collect information about app downloads and updates according to their own privacy policies. We do not have access to this information.</p>
-        </section>
-
-        <hr>
-
-        <section class="section">
-            <h2>Device Permissions</h2>
-            <p>Junior Kickers Journey requests minimal device permissions:</p>
-            
-            <h3>Permissions We Request:</h3>
-            
-            <h4>Camera Access (Optional)</h4>
-            <ul>
-                <li><strong>Purpose:</strong> To allow you to take photos directly within the app when logging activities</li>
-                <li><strong>Usage:</strong> Camera is only activated when YOU choose to "Take Photo/Video" option</li>
-                <li><strong>Storage:</strong> Captured media is saved as an optimized copy in the app's private storage (photos are compressed)</li>
-                <li><strong>Privacy:</strong> Camera access is only active when you explicitly choose to take a photo</li>
-                <li><strong>No Background Access:</strong> We never access your camera in the background or without your explicit action</li>
-                <li><strong>Opt-Out:</strong> You can deny this permission; you can still attach existing photos from your gallery</li>
-            </ul>
-
-            <h4>Photo Library Access (Optional)</h4>
-            <ul>
-                <li><strong>Purpose:</strong> To allow you to select existing photos/videos from your gallery to attach to activities</li>
-                <li><strong>Usage:</strong> We only access photos/videos YOU specifically select</li>
-                <li><strong>Storage:</strong> We create optimized copies of selected media in the app's private storage (photos are compressed, videos are copied as-is)</li>
-                <li><strong>Privacy:</strong> Original files in your gallery remain unchanged and private</li>
-                <li><strong>Deletion:</strong> Copies are automatically deleted when you remove media or uninstall the app</li>
-                <li><strong>Opt-Out:</strong> You can deny this permission; you can still use the camera to take new photos</li>
-            </ul>
-
-            <h3>Permissions We DON'T Request:</h3>
-            <ul class="cross-list">
-                <li>Internet/Network access (app is offline-only)</li>
-                <li>Location services</li>
-                <li>Contacts access</li>
-                <li>Microphone access</li>
-                <li>Phone call access</li>
-                <li>SMS or messaging access</li>
-            </ul>
-        </section>
-
-        <hr>
-
-        <section class="section">
-            <h2>International Users</h2>
-            <p>Junior Kickers Journey can be used anywhere in the world. Since all data stays on your device:</p>
-            <ul class="check-list">
-                <li>No cross-border data transfers</li>
-                <li>No data residency concerns</li>
-                <li>No GDPR compliance issues (we don't collect data)</li>
-                <li>No regional privacy law concerns</li>
-            </ul>
-            <p>Your data never leaves your device, regardless of where you are located.</p>
-        </section>
-
-        <hr>
-
-        <section class="section">
-            <h2>Changes to This Privacy Policy</h2>
-            <p>We may update this Privacy Policy from time to time to reflect:</p>
-            <ul>
-                <li>Changes in legal requirements</li>
-                <li>New features or functionality</li>
-                <li>Improvements to privacy practices</li>
-            </ul>
-
-            <h3>How We Notify You:</h3>
-            <ul>
-                <li>Updated policy will be posted in the app</li>
-                <li>"Last Updated" date will be changed</li>
-                <li>Significant changes will be highlighted in app update notes</li>
-            </ul>
-
-            <p><strong>Your Continued Use:</strong> By continuing to use the app after changes, you accept the updated policy.</p>
-        </section>
-
-        <hr>
-
-        <section class="section">
-            <h2>California Privacy Rights (CCPA)</h2>
-            <p>For California residents, Junior Kickers Journey complies with the California Consumer Privacy Act (CCPA):</p>
-            <p><strong>Personal Information We Collect:</strong> None</p>
-            <p>Since we do not collect, sell, or share personal information, CCPA data rights regarding access, deletion, and opt-out of sale do not apply (there's no data to access, delete, or opt-out of).</p>
-        </section>
-
-        <hr>
-
-        <section class="section">
-            <h2>European Privacy Rights (GDPR)</h2>
-            <p>For users in the European Union, Junior Kickers Journey complies with the General Data Protection Regulation (GDPR):</p>
-            <p><strong>Personal Data We Process:</strong> None</p>
-            <p>Since we do not collect or process personal data, GDPR rights regarding access, rectification, erasure, restriction, portability, and objection are inherently protected (all data stays on your device under your control).</p>
-            <p><strong>Legal Basis:</strong> Not applicable (no data processing)</p>
-        </section>
-
-        <hr>
-
-        <section id="contact" class="section">
-            <h2>Contact Us</h2>
-            <div class="contact-box">
-                <p>If you have questions about this Privacy Policy or our privacy practices:</p>
-                <p><strong>Email:</strong> <a href="mailto:sjuniorkickers@gmail.com">sjuniorkickers@gmail.com</a></p>
-                <p><strong>Response Time:</strong> Within 72 hours</p>
-                <p style="margin-top: 15px; font-size: 0.95em; color: #6b7280;">
-                    Please note: Since we don't collect your data, we cannot provide information about data we don't have. For questions about data on YOUR device, you have full access within the app.
-                </p>
-            </div>
-        </section>
-
-        <hr>
-
-        <section class="section">
-            <h2>Consent</h2>
-            <p>By downloading and using Junior Kickers Journey, you acknowledge that you have read and understood this Privacy Policy.</p>
-            
-            <h3>You Consent To:</h3>
-            <ul>
-                <li>Storing data locally on your device</li>
-                <li>Using the app according to these terms</li>
-                <li>Taking responsibility for your device's security</li>
-            </ul>
-
-            <h3>You Do NOT Consent To (because it doesn't happen):</h3>
-            <ul>
-                <li>Data collection by us</li>
-                <li>Data sharing with third parties</li>
-                <li>Online data transmission</li>
-                <li>Tracking or analytics</li>
-            </ul>
-        </section>
-
-        <hr>
-
-        <section class="section">
-            <div class="summary-box">
-                <h2 style="margin-top: 0; color: #047857;">Summary: Our Privacy Commitment</h2>
-                
-                <h3>✅ What We Promise:</h3>
-                <ol>
-                    <li><strong>Zero Data Collection:</strong> We never collect your personal information</li>
-                    <li><strong>Complete Privacy:</strong> All data stays on your device</li>
-                    <li><strong>No Tracking:</strong> We don't track your usage or behavior</li>
-                    <li><strong>No Sharing:</strong> We never share your information with anyone</li>
-                    <li><strong>Full Control:</strong> You own and control 100% of your data</li>
-                    <li><strong>Transparency:</strong> We're completely open about our practices</li>
-                    <li><strong>Simplicity:</strong> No complicated terms or hidden clauses</li>
-                </ol>
-
-                <h3>❌ What We'll Never Do:</h3>
-                <ol>
-                    <li>Collect your personal information</li>
-                    <li>Send your data to our servers</li>
-                    <li>Share your data with third parties</li>
-                    <li>Sell your information</li>
-                    <li>Track you with analytics</li>
-                    <li>Show you targeted ads</li>
-                    <li>Require user accounts or registration</li>
-                </ol>
-            </div>
-        </section>
-
-        <hr>
-
-        <section class="section">
-            <h2>Legal Information</h2>
-            <p><strong>App Name:</strong> Junior Kickers Journey</p>
-            <p><strong>Developer:</strong> Junior Kickers Journey Team</p>
-            <p><strong>Platform:</strong> iOS (15.1+) and Android (7.0+)</p>
-            <p><strong>Distribution:</strong> Apple App Store and Google Play Store</p>
-            <p><strong>Privacy Type:</strong> Offline-Only, Local Storage, Zero Data Collection</p>
-
-            <h3>Compliance:</h3>
-            <ul class="check-list">
-                <li>COPPA (Children's Online Privacy Protection Act)</li>
-                <li>CCPA (California Consumer Privacy Act)</li>
-                <li>GDPR (General Data Protection Regulation)</li>
-                <li>Apple App Store Privacy Guidelines</li>
-                <li>Google Play Privacy and Data Handling Requirements</li>
-            </ul>
-        </section>
-
-        <hr>
-
-        <section class="section">
-            <h2>Acknowledgment</h2>
-            <p>This Privacy Policy was last updated on <strong>October 26, 2025</strong>.</p>
-            <p>By using Junior Kickers Journey, you acknowledge that you have read, understood, and agree to this Privacy Policy.</p>
-            <p style="margin-top: 20px; font-style: italic;">Thank you for trusting Junior Kickers Journey with your child's soccer development tracking. Your privacy is our priority.</p>
-        </section>
-
-        <footer>
-            <p><strong>Version:</strong> 1.0 | <strong>Effective Date:</strong> November 1, 2025 | <strong>Last Reviewed:</strong> October 26, 2025</p>
-            <p style="margin-top: 10px;">Next Review: November 1, 2026 (annually)</p>
-            <p style="margin-top: 20px; font-style: italic;">This privacy policy is written in plain language to ensure all users can understand our commitment to privacy.</p>
-            <p style="margin-top: 30px;"><a href="index.html" style="color: #059669;">Back to Home</a></p>
-        </footer>
-    </div>
-
-    <a href="#" class="back-to-top" title="Back to top">↑</a>
+            navLinks.forEach(link => {
+                link.classList.remove('active');
+                if (link.getAttribute('href') === '#' + current) {
+                    link.classList.add('active');
+                }
+            });
+        });
+    </script>
 </body>
 </html>
-

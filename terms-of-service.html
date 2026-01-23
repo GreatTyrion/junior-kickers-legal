@@ -4,647 +4,1196 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Terms of Service for Junior Kickers Journey - Terms and conditions for using the app.">
+    <meta name="theme-color" content="#059669">
     <title>Terms of Service - Junior Kickers Journey</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
     <style>
+        :root {
+            --primary: #059669;
+            --primary-dark: #047857;
+            --primary-light: #d1fae5;
+            --secondary: #3b82f6;
+            --secondary-light: #dbeafe;
+            --accent: #f59e0b;
+            --accent-light: #fef3c7;
+            --text-primary: #111827;
+            --text-secondary: #4b5563;
+            --text-muted: #9ca3af;
+            --bg-primary: #ffffff;
+            --bg-secondary: #f9fafb;
+            --bg-tertiary: #f3f4f6;
+            --border: #e5e7eb;
+            --shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.05);
+            --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+            --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+            --radius-sm: 8px;
+            --radius-md: 12px;
+            --radius-lg: 16px;
+            --radius-xl: 24px;
+        }
+
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
         }
-        
+
+        html {
+            scroll-behavior: smooth;
+        }
+
         body {
-            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
             line-height: 1.6;
-            color: #1f2937;
-            background: #f9fafb;
+            color: var(--text-primary);
+            background: var(--bg-secondary);
+            -webkit-font-smoothing: antialiased;
         }
-        
-        .container {
-            max-width: 900px;
-            margin: 0 auto;
-            padding: 20px;
-            background: white;
-            min-height: 100vh;
-        }
-        
-        header {
-            background: linear-gradient(135deg, #059669 0%, #047857 100%);
+
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(135deg, #059669 0%, #047857 50%, #065f46 100%);
             color: white;
-            padding: 40px 20px;
-            margin: -20px -20px 40px -20px;
-            border-radius: 0 0 16px 16px;
+            padding: 60px 20px 40px;
+            position: relative;
+            overflow: hidden;
         }
-        
-        header h1 {
-            font-size: 2em;
-            margin-bottom: 10px;
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.05'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+            opacity: 0.5;
         }
-        
-        .meta-info {
-            font-size: 0.9em;
-            opacity: 0.95;
-            margin-top: 15px;
+
+        .hero-content {
+            max-width: 800px;
+            margin: 0 auto;
+            text-align: center;
+            position: relative;
+            z-index: 1;
         }
-        
-        .meta-info p {
-            margin: 5px 0;
-        }
-        
-        nav {
-            background: #f3f4f6;
-            padding: 15px;
-            margin-bottom: 30px;
-            border-radius: 8px;
-            position: sticky;
-            top: 20px;
-            z-index: 100;
-        }
-        
-        nav a {
-            color: #059669;
-            text-decoration: none;
-            margin-right: 20px;
-            font-size: 0.9em;
-            transition: color 0.3s;
-        }
-        
-        nav a:hover {
-            color: #047857;
-            text-decoration: underline;
-        }
-        
-        .key-point {
-            background: #ecfdf5;
-            border-left: 4px solid #10b981;
-            padding: 20px;
-            margin: 30px 0;
-            border-radius: 0 8px 8px 0;
-        }
-        
-        h2 {
-            color: #059669;
-            font-size: 1.8em;
-            margin-top: 50px;
+
+        .hero-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            background: rgba(255, 255, 255, 0.2);
+            backdrop-filter: blur(10px);
+            padding: 8px 16px;
+            border-radius: 100px;
+            font-size: 0.875rem;
+            font-weight: 500;
             margin-bottom: 20px;
-            padding-bottom: 10px;
-            border-bottom: 3px solid #d1fae5;
         }
-        
-        h3 {
-            color: #047857;
-            font-size: 1.3em;
-            margin-top: 30px;
-            margin-bottom: 15px;
+
+        .hero h1 {
+            font-size: clamp(2rem, 5vw, 2.5rem);
+            font-weight: 800;
+            margin-bottom: 16px;
+            letter-spacing: -0.02em;
         }
-        
-        h4 {
-            color: #065f46;
-            font-size: 1.1em;
+
+        .hero-meta {
+            display: flex;
+            justify-content: center;
+            gap: 24px;
+            flex-wrap: wrap;
+            font-size: 0.875rem;
+            opacity: 0.9;
             margin-top: 20px;
-            margin-bottom: 10px;
         }
-        
-        p {
-            margin: 15px 0;
+
+        .hero-meta span {
+            display: flex;
+            align-items: center;
+            gap: 6px;
+        }
+
+        /* Navigation */
+        .nav-bar {
+            background: var(--bg-secondary);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            border-bottom: 1px solid var(--border);
+        }
+
+        .nav-content {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 4px;
+            padding: 8px 24px;
+            overflow-x: auto;
+            -webkit-overflow-scrolling: touch;
+            scrollbar-width: none;
+        }
+
+        .nav-content::-webkit-scrollbar {
+            display: none;
+        }
+
+        .nav-link {
+            padding: 10px 14px;
+            color: var(--text-secondary);
+            text-decoration: none;
+            font-size: 0.875rem;
+            font-weight: 500;
+            white-space: nowrap;
+            border-radius: var(--radius-sm);
+            transition: all 0.2s ease;
+        }
+
+        .nav-link:hover {
+            color: var(--primary);
+            background: white;
+        }
+
+        .nav-link.active {
+            color: var(--primary);
+            background: white;
+            box-shadow: var(--shadow-sm);
+        }
+
+        .nav-back {
+            display: flex;
+            align-items: center;
+            gap: 4px;
+            padding: 10px 14px;
+            color: var(--text-secondary);
+            text-decoration: none;
+            font-size: 0.875rem;
+            font-weight: 500;
+            border-radius: var(--radius-sm);
+            transition: all 0.2s ease;
+        }
+
+        .nav-back:hover {
+            color: var(--primary);
+            background: white;
+        }
+
+        .nav-divider {
+            width: 1px;
+            height: 20px;
+            background: var(--border);
+            margin: 0 8px;
+        }
+
+        /* Main Content */
+        .main-content {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 40px 24px 80px;
+        }
+
+        /* Key Points Summary */
+        .summary-card {
+            background: linear-gradient(135deg, var(--primary-light) 0%, #ecfdf5 100%);
+            border: 2px solid var(--primary);
+            border-radius: var(--radius-lg);
+            padding: 28px;
+            margin-bottom: 40px;
+        }
+
+        .summary-card h2 {
+            color: var(--primary-dark);
+            font-size: 1.25rem;
+            margin-bottom: 20px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .summary-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 20px;
+        }
+
+        .summary-item h3 {
+            font-size: 0.875rem;
+            color: var(--primary-dark);
+            margin-bottom: 8px;
+            display: flex;
+            align-items: center;
+            gap: 6px;
+        }
+
+        .summary-item ul {
+            list-style: none;
+            font-size: 0.875rem;
+            color: var(--text-secondary);
+        }
+
+        .summary-item li {
+            padding: 4px 0;
+            padding-left: 20px;
+            position: relative;
+        }
+
+        .summary-item li::before {
+            content: '•';
+            position: absolute;
+            left: 6px;
+            color: var(--primary);
+        }
+
+        /* Section */
+        .section {
+            margin-bottom: 32px;
+        }
+
+        .section-card {
+            background: white;
+            border-radius: var(--radius-md);
+            border: 1px solid var(--border);
+            overflow: hidden;
+            transition: all 0.2s ease;
+        }
+
+        .section-card:hover {
+            border-color: var(--primary);
+        }
+
+        .section-header {
+            padding: 20px 24px;
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background: white;
+            transition: background 0.2s ease;
+        }
+
+        .section-header:hover {
+            background: var(--bg-secondary);
+        }
+
+        .section-title {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .section-number {
+            width: 32px;
+            height: 32px;
+            background: var(--primary-light);
+            color: var(--primary-dark);
+            border-radius: var(--radius-sm);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 700;
+            font-size: 0.875rem;
+        }
+
+        .section-title h2 {
+            font-size: 1.125rem;
+            font-weight: 600;
+            color: var(--text-primary);
+        }
+
+        .section-toggle {
+            width: 28px;
+            height: 28px;
+            border-radius: 50%;
+            background: var(--bg-tertiary);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1rem;
+            color: var(--text-secondary);
+            transition: all 0.3s ease;
+            flex-shrink: 0;
+        }
+
+        .section-card.open .section-toggle {
+            background: var(--primary);
+            color: white;
+            transform: rotate(45deg);
+        }
+
+        .section-body {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease;
+        }
+
+        .section-card.open .section-body {
+            max-height: 3000px;
+        }
+
+        .section-content {
+            padding: 0 24px 24px;
+            color: var(--text-secondary);
             line-height: 1.8;
         }
-        
-        ul, ol {
-            margin: 15px 0 15px 30px;
-            line-height: 1.8;
+
+        .section-content h3 {
+            color: var(--text-primary);
+            font-size: 1rem;
+            font-weight: 600;
+            margin: 24px 0 12px;
         }
-        
-        li {
+
+        .section-content h3:first-child {
+            margin-top: 0;
+        }
+
+        .section-content p {
+            margin: 12px 0;
+        }
+
+        .section-content ul,
+        .section-content ol {
+            margin: 12px 0 12px 24px;
+        }
+
+        .section-content li {
             margin: 8px 0;
         }
-        
-        .highlight-box {
-            background: #fef3c7;
-            border: 2px solid #fbbf24;
-            padding: 20px;
-            margin: 25px 0;
-            border-radius: 8px;
-        }
-        
-        .check-list {
-            list-style: none;
-            margin-left: 0;
-        }
-        
-        .check-list li:before {
-            content: "✅ ";
-            margin-right: 8px;
-        }
-        
-        .cross-list {
-            list-style: none;
-            margin-left: 0;
-        }
-        
-        .cross-list li:before {
-            content: "❌ ";
-            margin-right: 8px;
-        }
-        
-        .section {
-            margin: 40px 0;
-        }
-        
-        hr {
-            border: none;
-            border-top: 2px solid #e5e7eb;
-            margin: 40px 0;
-        }
-        
-        .summary-box {
-            background: linear-gradient(135deg, #ecfdf5 0%, #d1fae5 100%);
-            padding: 30px;
-            margin: 40px 0;
-            border-radius: 12px;
-            border: 2px solid #10b981;
-        }
-        
-        .summary-box h3 {
-            color: #047857;
-            margin-top: 15px;
-        }
-        
-        .contact-box {
-            background: #eff6ff;
-            padding: 25px;
-            border-radius: 8px;
-            margin: 30px 0;
-            border-left: 4px solid #3b82f6;
-        }
-        
-        .contact-box a {
-            color: #2563eb;
+
+        .section-content a {
+            color: var(--primary);
             text-decoration: none;
+            font-weight: 500;
         }
-        
-        .contact-box a:hover {
+
+        .section-content a:hover {
             text-decoration: underline;
         }
-        
-        footer {
-            margin-top: 60px;
-            padding-top: 30px;
-            border-top: 2px solid #e5e7eb;
-            text-align: center;
-            color: #6b7280;
-            font-size: 0.9em;
+
+        /* Lists */
+        .check-list {
+            list-style: none;
+            margin-left: 0 !important;
         }
-        
+
+        .check-list li {
+            padding-left: 28px;
+            position: relative;
+        }
+
+        .check-list li::before {
+            content: '✓';
+            position: absolute;
+            left: 0;
+            color: var(--primary);
+            font-weight: bold;
+        }
+
+        .cross-list {
+            list-style: none;
+            margin-left: 0 !important;
+        }
+
+        .cross-list li {
+            padding-left: 28px;
+            position: relative;
+        }
+
+        .cross-list li::before {
+            content: '✗';
+            position: absolute;
+            left: 0;
+            color: #ef4444;
+            font-weight: bold;
+        }
+
+        /* Alert Boxes */
+        .alert-box {
+            padding: 16px 20px;
+            border-radius: var(--radius-sm);
+            margin: 16px 0;
+        }
+
+        .alert-box.warning {
+            background: var(--accent-light);
+            border-left: 4px solid var(--accent);
+        }
+
+        .alert-box.info {
+            background: var(--secondary-light);
+            border-left: 4px solid var(--secondary);
+        }
+
+        .alert-box.success {
+            background: var(--primary-light);
+            border-left: 4px solid var(--primary);
+        }
+
+        .alert-box strong {
+            color: var(--text-primary);
+        }
+
+        /* Contact Section */
+        .contact-section {
+            background: linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 100%);
+            border-radius: var(--radius-xl);
+            padding: 40px 32px;
+            text-align: center;
+            color: white;
+            margin-top: 40px;
+        }
+
+        .contact-section h2 {
+            font-size: 1.5rem;
+            font-weight: 700;
+            margin-bottom: 12px;
+        }
+
+        .contact-section p {
+            opacity: 0.95;
+            margin-bottom: 8px;
+        }
+
+        .contact-email {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            background: rgba(255, 255, 255, 0.2);
+            backdrop-filter: blur(10px);
+            padding: 14px 28px;
+            border-radius: 100px;
+            color: white;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 1rem;
+            margin-top: 16px;
+            transition: all 0.2s ease;
+        }
+
+        .contact-email:hover {
+            background: rgba(255, 255, 255, 0.3);
+            transform: translateY(-2px);
+        }
+
+        /* Footer */
+        .footer {
+            background: white;
+            border-top: 1px solid var(--border);
+            padding: 32px 24px;
+            text-align: center;
+            margin-top: 60px;
+        }
+
+        .footer-meta {
+            display: flex;
+            justify-content: center;
+            gap: 24px;
+            flex-wrap: wrap;
+            font-size: 0.875rem;
+            color: var(--text-secondary);
+            margin-bottom: 20px;
+        }
+
+        .footer-links {
+            display: flex;
+            justify-content: center;
+            gap: 24px;
+            flex-wrap: wrap;
+            margin-bottom: 20px;
+        }
+
+        .footer-links a {
+            color: var(--text-secondary);
+            text-decoration: none;
+            font-size: 0.875rem;
+            transition: color 0.2s ease;
+        }
+
+        .footer-links a:hover {
+            color: var(--primary);
+        }
+
+        .footer-copyright {
+            color: var(--text-muted);
+            font-size: 0.8125rem;
+        }
+
+        /* Back to Top */
         .back-to-top {
             position: fixed;
-            bottom: 30px;
-            right: 30px;
-            background: #059669;
+            bottom: 24px;
+            right: 24px;
+            width: 48px;
+            height: 48px;
+            background: var(--primary);
             color: white;
-            width: 50px;
-            height: 50px;
             border-radius: 50%;
             display: flex;
             align-items: center;
             justify-content: center;
             text-decoration: none;
-            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
-            transition: all 0.3s;
+            box-shadow: var(--shadow-lg);
+            transition: all 0.3s ease;
+            opacity: 0;
+            visibility: hidden;
+            z-index: 99;
         }
-        
+
+        .back-to-top.visible {
+            opacity: 1;
+            visibility: visible;
+        }
+
         .back-to-top:hover {
-            background: #047857;
-            transform: translateY(-3px);
-            box-shadow: 0 6px 12px rgba(0,0,0,0.15);
+            background: var(--primary-dark);
+            transform: translateY(-4px);
         }
-        
-        @media (max-width: 768px) {
-            .container {
-                padding: 15px;
+
+        /* Responsive */
+        @media (max-width: 640px) {
+            .hero {
+                padding: 40px 20px 30px;
             }
-            
-            header {
-                margin: -15px -15px 30px -15px;
-                padding: 30px 15px;
+
+            .hero h1 {
+                font-size: 1.75rem;
             }
-            
-            header h1 {
-                font-size: 1.5em;
+
+            .hero-meta {
+                flex-direction: column;
+                gap: 8px;
             }
-            
-            h2 {
-                font-size: 1.4em;
+
+            .nav-content {
+                justify-content: flex-start;
+                padding: 8px 16px;
             }
-            
-            nav {
-                position: relative;
-                top: 0;
+
+            .nav-link, .nav-back {
+                padding: 8px 10px;
+                font-size: 0.8125rem;
             }
-            
-            nav a {
-                display: block;
-                margin: 10px 0;
+
+            .main-content {
+                padding: 24px 16px 60px;
             }
-            
+
+            .summary-card {
+                padding: 20px;
+            }
+
+            .summary-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .section-header {
+                padding: 16px;
+            }
+
+            .section-content {
+                padding: 0 16px 16px;
+            }
+
+            .section-title h2 {
+                font-size: 1rem;
+            }
+
+            .contact-section {
+                padding: 32px 20px;
+                border-radius: var(--radius-lg);
+            }
+
             .back-to-top {
-                bottom: 20px;
-                right: 20px;
-                width: 45px;
-                height: 45px;
+                bottom: 16px;
+                right: 16px;
+                width: 44px;
+                height: 44px;
             }
         }
     </style>
 </head>
 <body>
-    <div class="container">
-        <header>
+    <!-- Hero Section -->
+    <header class="hero">
+        <div class="hero-content">
+            <div class="hero-badge">
+                <span>⚽</span>
+                <span>Junior Kickers Journey</span>
+            </div>
             <h1>Terms of Service</h1>
-            <p style="font-size: 1.2em; margin-top: 10px;">Junior Kickers Journey</p>
-            <div class="meta-info">
-                <p><strong>Effective Date:</strong> November 1, 2025</p>
-                <p><strong>Last Updated:</strong> January 5, 2026</p>
-                <p><strong>Version:</strong> 1.1</p>
+            <p style="opacity: 0.95;">Please read these terms carefully before using the app</p>
+            <div class="hero-meta">
+                <span>📅 Effective: November 1, 2025</span>
+                <span>🔄 Updated: January 22, 2026</span>
+                <span>📋 Version 1.1</span>
             </div>
-        </header>
+        </div>
+    </header>
 
-        <nav>
-            <a href="index.html">← Back to Home</a>
-            <a href="#acceptance">Acceptance</a>
-            <a href="#license">License</a>
-            <a href="#data">Data</a>
-            <a href="#liability">Liability</a>
-            <a href="#contact">Contact</a>
-        </nav>
+    <!-- Navigation -->
+    <nav class="nav-bar">
+        <div class="nav-content">
+            <a href="index.html" class="nav-back">← Home</a>
+            <div class="nav-divider"></div>
+            <a href="#summary" class="nav-link">Summary</a>
+            <a href="#terms" class="nav-link">Terms</a>
+            <a href="#contact" class="nav-link">Contact</a>
+        </div>
+    </nav>
 
-        <section id="acceptance" class="section">
-            <h2>1. Acceptance of Terms</h2>
-            <p>By downloading, installing, or using Junior Kickers Journey ("the App"), you ("User", "you", or "your") agree to be bound by these Terms of Service ("Terms"). If you do not agree to these Terms, do not use the App.</p>
-            
-            <h3>1.1 Eligibility</h3>
-            <ul>
-                <li>The App is intended for parents and guardians of children aged 6-12 who play soccer</li>
-                <li>You must be at least 18 years old to use the App</li>
-                <li>You must be the parent or legal guardian of the child whose information you track</li>
-                <li>By using the App, you represent that you meet these eligibility requirements</li>
-            </ul>
-
-            <h3>1.2 Changes to Terms</h3>
-            <p>We reserve the right to modify these Terms at any time. Changes will be effective upon posting the updated Terms within the App. Your continued use of the App after changes constitutes acceptance of the new Terms.</p>
-        </section>
-
-        <hr>
-
-        <section class="section">
-            <h2>2. Description of Service</h2>
-            
-            <h3>2.1 What the App Does</h3>
-            <p>Junior Kickers Journey is an offline mobile application that allows parents to:</p>
-            <ul class="check-list">
-                <li>Log and track their child's soccer training sessions</li>
-                <li>Record match performances and statistics</li>
-                <li>Monitor skill development over time</li>
-                <li>Celebrate achievements and milestones with animations</li>
-                <li>Attach photos and videos to activities</li>
-                <li>View progress through charts and analytics</li>
-                <li>Generate progress reports (PDF)</li>
-                <li>Learn fun soccer facts after logging activities</li>
-            </ul>
-
-            <h3>2.2 What the App Does NOT Do</h3>
-            <p>The App does NOT:</p>
-            <ul class="cross-list">
-                <li>Require internet connectivity or user accounts</li>
-                <li>Collect or transmit data to external servers</li>
-                <li>Provide professional coaching or medical advice</li>
-                <li>Guarantee improvement in athletic performance</li>
-                <li>Connect with coaches, teams, or other users</li>
-                <li>Offer social features or community interaction</li>
-            </ul>
-
-            <h3>2.3 Offline-Only Service</h3>
-            <p>The App operates entirely offline. All data is stored locally on your device. We do not provide cloud storage, backup services, or data synchronization across devices.</p>
-        </section>
-
-        <hr>
-
-        <section id="license" class="section">
-            <h2>3. License and Usage Rights</h2>
-            
-            <h3>3.1 License Grant</h3>
-            <p>Subject to these Terms, we grant you a limited, non-exclusive, non-transferable, revocable license to download, install, and use the App on your personal device(s) solely for personal, non-commercial purposes.</p>
-
-            <h3>3.2 License Restrictions</h3>
-            <p>You agree NOT to:</p>
-            <ul class="cross-list">
-                <li>Copy, modify, or create derivative works of the App</li>
-                <li>Reverse engineer, decompile, or disassemble the App</li>
-                <li>Remove or alter any proprietary notices or labels</li>
-                <li>Use the App for commercial purposes</li>
-                <li>Rent, lease, lend, sell, or redistribute the App</li>
-                <li>Use the App in violation of any applicable laws</li>
-                <li>Attempt to gain unauthorized access to any part of the App</li>
-                <li>Use the App to harass, abuse, or harm others</li>
-                <li>Upload malicious code, viruses, or harmful content</li>
-            </ul>
-
-            <h3>3.3 Ownership</h3>
-            <p>The App, including all intellectual property rights, remains our exclusive property. These Terms do not transfer any ownership rights to you.</p>
-        </section>
-
-        <hr>
-
-        <section class="section">
-            <h2>4. User Responsibilities</h2>
-            
-            <h3>4.1 Your Data</h3>
-            <p>You are solely responsible for:</p>
-            <ul class="check-list">
-                <li>All data you enter into the App</li>
-                <li>Accuracy of information logged</li>
-                <li>Protecting your device and data</li>
-                <li>Backing up your device (if desired)</li>
-                <li>Maintaining your device security (passcode, etc.)</li>
-                <li>Deciding what information to track and share</li>
-            </ul>
-
-            <h3>4.2 Appropriate Use</h3>
-            <p>You agree to:</p>
-            <ul class="check-list">
-                <li>Use the App only for tracking your own child's soccer activities</li>
-                <li>Provide accurate information</li>
-                <li>Respect intellectual property rights</li>
-                <li>Use the App in compliance with all applicable laws</li>
-                <li>Not use the App for any illegal or unauthorized purpose</li>
-            </ul>
-
-            <h3>4.3 Parental Responsibility</h3>
-            <p>As the parent or guardian:</p>
-            <ul class="check-list">
-                <li>You are responsible for all data about your child</li>
-                <li>You decide what information to record</li>
-                <li>You control access to the App on your device</li>
-                <li>You determine if/when to share information with others</li>
-                <li>You ensure appropriate use by your child (if they view the App)</li>
-            </ul>
-        </section>
-
-        <hr>
-
-        <section id="data" class="section">
-            <h2>5. Data and Privacy</h2>
-            
-            <h3>5.1 Data Storage</h3>
-            <p>All data is stored <strong>locally on your device</strong>. We do NOT:</p>
-            <ul class="cross-list">
-                <li>Collect, access, or store your data on our servers</li>
-                <li>Transmit data over the internet</li>
-                <li>Back up your data to the cloud</li>
-                <li>Have access to any information you enter</li>
-            </ul>
-
-            <h3>5.2 Your Data Ownership</h3>
-            <p>You own and control all data you enter into the App. You may:</p>
-            <ul class="check-list">
-                <li>View, edit, or delete data at any time</li>
-                <li>Export data (PDF reports)</li>
-                <li>Share data using your device's native sharing features (your choice)</li>
-            </ul>
-
-            <h3>5.3 Privacy Policy</h3>
-            <p>Your use of the App is also governed by our Privacy Policy, which is incorporated into these Terms by reference. Please review our <a href="privacy-policy.html">Privacy Policy</a> to understand our privacy practices.</p>
-
-            <div class="highlight-box">
-                <h4>⚠️ Important: Data Loss</h4>
-                <p>We are NOT responsible for data loss. Since all data is stored locally on your device:</p>
-                <ul>
-                    <li>Device failure, damage, or loss may result in data loss</li>
-                    <li>Uninstalling the App deletes all data permanently</li>
-                    <li>We cannot recover data once deleted</li>
-                    <li>We recommend regular device backups (via iCloud, Google Drive, or other backup services)</li>
-                </ul>
+    <!-- Main Content -->
+    <main class="main-content">
+        <!-- Key Points Summary -->
+        <section id="summary" class="summary-card">
+            <h2>📋 Quick Summary</h2>
+            <div class="summary-grid">
+                <div class="summary-item">
+                    <h3>✅ You Can</h3>
+                    <ul>
+                        <li>Use the app for personal tracking</li>
+                        <li>Own and control all your data</li>
+                        <li>Export progress reports (PDF)</li>
+                        <li>Uninstall anytime</li>
+                    </ul>
+                </div>
+                <div class="summary-item">
+                    <h3>❌ You Cannot</h3>
+                    <ul>
+                        <li>Copy or redistribute the app</li>
+                        <li>Use for commercial purposes</li>
+                        <li>Reverse engineer the app</li>
+                        <li>Violate laws or rights</li>
+                    </ul>
+                </div>
+                <div class="summary-item">
+                    <h3>⚠️ Remember</h3>
+                    <ul>
+                        <li>Data is stored locally only</li>
+                        <li>Back up your device regularly</li>
+                        <li>No professional advice provided</li>
+                        <li>You control your data security</li>
+                    </ul>
+                </div>
             </div>
         </section>
 
-        <hr>
+        <!-- Terms Sections -->
+        <div id="terms">
+            <!-- Section 1: Acceptance -->
+            <div class="section">
+                <div class="section-card open">
+                    <div class="section-header">
+                        <div class="section-title">
+                            <span class="section-number">1</span>
+                            <h2>Acceptance of Terms</h2>
+                        </div>
+                        <span class="section-toggle">+</span>
+                    </div>
+                    <div class="section-body">
+                        <div class="section-content">
+                            <p>By downloading, installing, or using Junior Kickers Journey ("the App"), you ("User", "you", or "your") agree to be bound by these Terms of Service ("Terms"). If you do not agree to these Terms, do not use the App.</p>
+                            
+                            <h3>1.1 Eligibility</h3>
+                            <ul class="check-list">
+                                <li>The App is intended for parents and guardians of children aged 6-12 who play soccer</li>
+                                <li>You must be at least 18 years old to use the App</li>
+                                <li>You must be the parent or legal guardian of the child whose information you track</li>
+                                <li>By using the App, you represent that you meet these eligibility requirements</li>
+                            </ul>
 
-        <section class="section">
-            <h2>6. Disclaimers and Warranties</h2>
-            
-            <h3>6.1 No Warranty</h3>
-            <p>THE APP IS PROVIDED "AS IS" AND "AS AVAILABLE" WITHOUT WARRANTIES OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO:</p>
-            <ul class="cross-list">
-                <li>Warranties of merchantability</li>
-                <li>Warranties of fitness for a particular purpose</li>
-                <li>Warranties of non-infringement</li>
-                <li>Warranties that the App will be error-free or uninterrupted</li>
-                <li>Warranties regarding data accuracy or reliability</li>
-            </ul>
-
-            <h3>6.2 No Professional Advice</h3>
-            <p>The App is for personal tracking purposes only and does NOT provide:</p>
-            <ul class="cross-list">
-                <li>Professional coaching or training advice</li>
-                <li>Medical, health, or fitness advice</li>
-                <li>Athletic performance guarantees</li>
-                <li>Injury prevention or treatment recommendations</li>
-            </ul>
-            <p><strong>Consult qualified professionals</strong> (coaches, doctors, trainers) for professional guidance.</p>
-
-            <h3>6.3 No Guarantee of Results</h3>
-            <p>Use of the App does NOT guarantee:</p>
-            <ul class="cross-list">
-                <li>Improvement in soccer skills or performance</li>
-                <li>Achievement of specific athletic goals</li>
-                <li>Success in competitions or evaluations</li>
-                <li>Scholarship opportunities or team selection</li>
-            </ul>
-        </section>
-
-        <hr>
-
-        <section id="liability" class="section">
-            <h2>7. Limitation of Liability</h2>
-            
-            <h3>7.1 No Liability for Damages</h3>
-            <p>TO THE MAXIMUM EXTENT PERMITTED BY LAW, WE SHALL NOT BE LIABLE FOR ANY:</p>
-            <ul>
-                <li>Indirect, incidental, special, consequential, or punitive damages</li>
-                <li>Loss of profits, revenue, data, or use</li>
-                <li>Business interruption or lost opportunities</li>
-                <li>Cost of substitute goods or services</li>
-                <li>Personal injury or property damage</li>
-            </ul>
-            <p>ARISING OUT OF OR RELATED TO YOUR USE OF THE APP, WHETHER BASED ON WARRANTY, CONTRACT, TORT (INCLUDING NEGLIGENCE), OR ANY OTHER LEGAL THEORY.</p>
-
-            <h3>7.2 Maximum Liability</h3>
-            <p>TO THE MAXIMUM EXTENT PERMITTED BY LAW, OUR TOTAL LIABILITY FOR ANY CLAIMS RELATED TO THE APP SHALL NOT EXCEED THE AMOUNT YOU PAID FOR THE APP (WHICH IS $0 IF THE APP IS FREE).</p>
-
-            <h3>7.3 Data Loss</h3>
-            <p>We are NOT liable for:</p>
-            <ul class="cross-list">
-                <li>Data loss due to device failure, damage, or loss</li>
-                <li>Data deletion by you or unauthorized users</li>
-                <li>Data loss due to uninstalling the App</li>
-                <li>Inability to recover deleted data</li>
-            </ul>
-            <p><strong>BACK UP YOUR DEVICE REGULARLY</strong> if you want to preserve your data.</p>
-        </section>
-
-        <hr>
-
-        <section class="section">
-            <h2>8. Termination</h2>
-            
-            <h3>8.1 Termination by You</h3>
-            <p>You may stop using the App at any time by:</p>
-            <ul class="check-list">
-                <li>Uninstalling the App from your device</li>
-                <li>Deleting all data within the App</li>
-            </ul>
-
-            <h3>8.2 Termination by Us</h3>
-            <p>We may terminate or suspend your access to the App at any time, without notice, if:</p>
-            <ul>
-                <li>You violate these Terms</li>
-                <li>You engage in illegal or harmful activities</li>
-                <li>We discontinue the App</li>
-            </ul>
-
-            <h3>8.3 Effect of Termination</h3>
-            <p>Upon termination:</p>
-            <ul>
-                <li>Your license to use the App ends immediately</li>
-                <li>You must uninstall the App from your device</li>
-                <li>All data remains on your device until you delete it</li>
-                <li>Sections of these Terms that should survive termination will remain in effect</li>
-            </ul>
-        </section>
-
-        <hr>
-
-        <section class="section">
-            <h2>9. Platform-Specific Terms</h2>
-            
-            <h3>9.1 Apple App Store (iOS)</h3>
-            <p>If you downloaded the App from the Apple App Store:</p>
-            <ul>
-                <li>These Terms are between you and us, not Apple</li>
-                <li>Apple has no obligation to provide support or maintenance</li>
-                <li>Apple is not liable for any claims related to the App</li>
-                <li>Apple is a third-party beneficiary of these Terms</li>
-                <li>You must comply with Apple's App Store Terms of Service</li>
-            </ul>
-
-            <h3>9.2 Google Play Store (Android)</h3>
-            <p>If you downloaded the App from Google Play Store:</p>
-            <ul>
-                <li>These Terms are between you and us, not Google</li>
-                <li>Google has no obligation to provide support or maintenance</li>
-                <li>Google is not liable for any claims related to the App</li>
-                <li>You must comply with Google Play's Terms of Service</li>
-            </ul>
-        </section>
-
-        <hr>
-
-        <section class="section">
-            <h2>10. Miscellaneous Provisions</h2>
-            
-            <h3>10.1 Entire Agreement</h3>
-            <p>These Terms, together with our Privacy Policy, constitute the entire agreement between you and us regarding the App and supersede all prior agreements.</p>
-
-            <h3>10.2 Severability</h3>
-            <p>If any provision of these Terms is found to be invalid or unenforceable, the remaining provisions will remain in full force and effect.</p>
-
-            <h3>10.3 Governing Law</h3>
-            <p>These Terms are governed by applicable law. Any disputes will be resolved through informal resolution first, and if needed, through appropriate legal channels.</p>
-
-            <h3>10.4 No Third-Party Beneficiaries</h3>
-            <p>These Terms do not create any third-party beneficiary rights, except as expressly stated (e.g., Apple or Google as third-party beneficiaries).</p>
-        </section>
-
-        <hr>
-
-        <section id="contact" class="section">
-            <h2>Contact Information</h2>
-            <div class="contact-box">
-                <p>If you have questions about these Terms of Service:</p>
-                <p><strong>Email:</strong> <a href="mailto:sjuniorkickers@gmail.com">sjuniorkickers@gmail.com</a></p>
-                <p><strong>Response Time:</strong> Within 48 hours</p>
+                            <h3>1.2 Changes to Terms</h3>
+                            <p>We reserve the right to modify these Terms at any time. Changes will be effective upon posting the updated Terms within the App. Your continued use of the App after changes constitutes acceptance of the new Terms.</p>
+                        </div>
+                    </div>
+                </div>
             </div>
+
+            <!-- Section 2: Description -->
+            <div class="section">
+                <div class="section-card">
+                    <div class="section-header">
+                        <div class="section-title">
+                            <span class="section-number">2</span>
+                            <h2>Description of Service</h2>
+                        </div>
+                        <span class="section-toggle">+</span>
+                    </div>
+                    <div class="section-body">
+                        <div class="section-content">
+                            <h3>2.1 What the App Does</h3>
+                            <p>Junior Kickers Journey is an offline mobile application that allows parents to:</p>
+                            <ul class="check-list">
+                                <li>Log and track their child's soccer training sessions</li>
+                                <li>Record match performances and statistics</li>
+                                <li>Monitor skill development over time</li>
+                                <li>Celebrate achievements and milestones with animations</li>
+                                <li>Attach photos and videos to activities</li>
+                                <li>View progress through charts and analytics</li>
+                                <li>Generate progress reports (PDF)</li>
+                                <li>Learn fun soccer facts after logging activities</li>
+                            </ul>
+
+                            <h3>2.2 What the App Does NOT Do</h3>
+                            <ul class="cross-list">
+                                <li>Require internet connectivity or user accounts</li>
+                                <li>Collect or transmit data to external servers</li>
+                                <li>Provide professional coaching or medical advice</li>
+                                <li>Guarantee improvement in athletic performance</li>
+                                <li>Connect with coaches, teams, or other users</li>
+                                <li>Offer social features or community interaction</li>
+                            </ul>
+
+                            <h3>2.3 Offline-Only Service</h3>
+                            <p>The App operates entirely offline. All data is stored locally on your device. We do not provide cloud storage, backup services, or data synchronization across devices.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Section 3: License -->
+            <div class="section">
+                <div class="section-card">
+                    <div class="section-header">
+                        <div class="section-title">
+                            <span class="section-number">3</span>
+                            <h2>License and Usage Rights</h2>
+                        </div>
+                        <span class="section-toggle">+</span>
+                    </div>
+                    <div class="section-body">
+                        <div class="section-content">
+                            <h3>3.1 License Grant</h3>
+                            <p>Subject to these Terms, we grant you a limited, non-exclusive, non-transferable, revocable license to download, install, and use the App on your personal device(s) solely for personal, non-commercial purposes.</p>
+
+                            <h3>3.2 License Restrictions</h3>
+                            <p>You agree NOT to:</p>
+                            <ul class="cross-list">
+                                <li>Copy, modify, or create derivative works of the App</li>
+                                <li>Reverse engineer, decompile, or disassemble the App</li>
+                                <li>Remove or alter any proprietary notices or labels</li>
+                                <li>Use the App for commercial purposes</li>
+                                <li>Rent, lease, lend, sell, or redistribute the App</li>
+                                <li>Use the App in violation of any applicable laws</li>
+                                <li>Attempt to gain unauthorized access to any part of the App</li>
+                                <li>Use the App to harass, abuse, or harm others</li>
+                                <li>Upload malicious code, viruses, or harmful content</li>
+                            </ul>
+
+                            <h3>3.3 Ownership</h3>
+                            <p>The App, including all intellectual property rights, remains our exclusive property. These Terms do not transfer any ownership rights to you.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Section 4: User Responsibilities -->
+            <div class="section">
+                <div class="section-card">
+                    <div class="section-header">
+                        <div class="section-title">
+                            <span class="section-number">4</span>
+                            <h2>User Responsibilities</h2>
+                        </div>
+                        <span class="section-toggle">+</span>
+                    </div>
+                    <div class="section-body">
+                        <div class="section-content">
+                            <h3>4.1 Your Data</h3>
+                            <p>You are solely responsible for:</p>
+                            <ul class="check-list">
+                                <li>All data you enter into the App</li>
+                                <li>Accuracy of information logged</li>
+                                <li>Protecting your device and data</li>
+                                <li>Backing up your device (if desired)</li>
+                                <li>Maintaining your device security (passcode, etc.)</li>
+                                <li>Deciding what information to track and share</li>
+                            </ul>
+
+                            <h3>4.2 Appropriate Use</h3>
+                            <p>You agree to:</p>
+                            <ul class="check-list">
+                                <li>Use the App only for tracking your own child's soccer activities</li>
+                                <li>Provide accurate information</li>
+                                <li>Respect intellectual property rights</li>
+                                <li>Use the App in compliance with all applicable laws</li>
+                                <li>Not use the App for any illegal or unauthorized purpose</li>
+                            </ul>
+
+                            <h3>4.3 Parental Responsibility</h3>
+                            <p>As the parent or guardian:</p>
+                            <ul class="check-list">
+                                <li>You are responsible for all data about your child</li>
+                                <li>You decide what information to record</li>
+                                <li>You control access to the App on your device</li>
+                                <li>You determine if/when to share information with others</li>
+                                <li>You ensure appropriate use by your child (if they view the App)</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Section 5: Data and Privacy -->
+            <div class="section">
+                <div class="section-card">
+                    <div class="section-header">
+                        <div class="section-title">
+                            <span class="section-number">5</span>
+                            <h2>Data and Privacy</h2>
+                        </div>
+                        <span class="section-toggle">+</span>
+                    </div>
+                    <div class="section-body">
+                        <div class="section-content">
+                            <h3>5.1 Data Storage</h3>
+                            <p>All data is stored <strong>locally on your device</strong>. We do NOT:</p>
+                            <ul class="cross-list">
+                                <li>Collect, access, or store your data on our servers</li>
+                                <li>Transmit data over the internet</li>
+                                <li>Back up your data to the cloud</li>
+                                <li>Have access to any information you enter</li>
+                            </ul>
+
+                            <h3>5.2 Your Data Ownership</h3>
+                            <p>You own and control all data you enter into the App. You may:</p>
+                            <ul class="check-list">
+                                <li>View, edit, or delete data at any time</li>
+                                <li>Export data (PDF reports)</li>
+                                <li>Share data using your device's native sharing features (your choice)</li>
+                            </ul>
+
+                            <h3>5.3 Privacy Policy</h3>
+                            <p>Your use of the App is also governed by our Privacy Policy, which is incorporated into these Terms by reference. Please review our <a href="privacy-policy.html">Privacy Policy</a> to understand our privacy practices.</p>
+
+                            <div class="alert-box warning">
+                                <strong>⚠️ Important: Data Loss</strong>
+                                <p>We are NOT responsible for data loss. Since all data is stored locally on your device:</p>
+                                <ul>
+                                    <li>Device failure, damage, or loss may result in data loss</li>
+                                    <li>Uninstalling the App deletes all data permanently</li>
+                                    <li>We cannot recover data once deleted</li>
+                                    <li>We recommend regular device backups (via iCloud, Google Drive, or other backup services)</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Section 6: Disclaimers -->
+            <div class="section">
+                <div class="section-card">
+                    <div class="section-header">
+                        <div class="section-title">
+                            <span class="section-number">6</span>
+                            <h2>Disclaimers and Warranties</h2>
+                        </div>
+                        <span class="section-toggle">+</span>
+                    </div>
+                    <div class="section-body">
+                        <div class="section-content">
+                            <h3>6.1 No Warranty</h3>
+                            <p>THE APP IS PROVIDED "AS IS" AND "AS AVAILABLE" WITHOUT WARRANTIES OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO:</p>
+                            <ul class="cross-list">
+                                <li>Warranties of merchantability</li>
+                                <li>Warranties of fitness for a particular purpose</li>
+                                <li>Warranties of non-infringement</li>
+                                <li>Warranties that the App will be error-free or uninterrupted</li>
+                                <li>Warranties regarding data accuracy or reliability</li>
+                            </ul>
+
+                            <h3>6.2 No Professional Advice</h3>
+                            <p>The App is for personal tracking purposes only and does NOT provide:</p>
+                            <ul class="cross-list">
+                                <li>Professional coaching or training advice</li>
+                                <li>Medical, health, or fitness advice</li>
+                                <li>Athletic performance guarantees</li>
+                                <li>Injury prevention or treatment recommendations</li>
+                            </ul>
+                            <p><strong>Consult qualified professionals</strong> (coaches, doctors, trainers) for professional guidance.</p>
+
+                            <h3>6.3 No Guarantee of Results</h3>
+                            <p>Use of the App does NOT guarantee:</p>
+                            <ul class="cross-list">
+                                <li>Improvement in soccer skills or performance</li>
+                                <li>Achievement of specific athletic goals</li>
+                                <li>Success in competitions or evaluations</li>
+                                <li>Scholarship opportunities or team selection</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Section 7: Liability -->
+            <div class="section">
+                <div class="section-card">
+                    <div class="section-header">
+                        <div class="section-title">
+                            <span class="section-number">7</span>
+                            <h2>Limitation of Liability</h2>
+                        </div>
+                        <span class="section-toggle">+</span>
+                    </div>
+                    <div class="section-body">
+                        <div class="section-content">
+                            <h3>7.1 No Liability for Damages</h3>
+                            <p>TO THE MAXIMUM EXTENT PERMITTED BY LAW, WE SHALL NOT BE LIABLE FOR ANY:</p>
+                            <ul>
+                                <li>Indirect, incidental, special, consequential, or punitive damages</li>
+                                <li>Loss of profits, revenue, data, or use</li>
+                                <li>Business interruption or lost opportunities</li>
+                                <li>Cost of substitute goods or services</li>
+                                <li>Personal injury or property damage</li>
+                            </ul>
+                            <p>ARISING OUT OF OR RELATED TO YOUR USE OF THE APP, WHETHER BASED ON WARRANTY, CONTRACT, TORT (INCLUDING NEGLIGENCE), OR ANY OTHER LEGAL THEORY.</p>
+
+                            <h3>7.2 Maximum Liability</h3>
+                            <p>TO THE MAXIMUM EXTENT PERMITTED BY LAW, OUR TOTAL LIABILITY FOR ANY CLAIMS RELATED TO THE APP SHALL NOT EXCEED THE AMOUNT YOU PAID FOR THE APP (WHICH IS $0 IF THE APP IS FREE).</p>
+
+                            <h3>7.3 Data Loss</h3>
+                            <p>We are NOT liable for:</p>
+                            <ul class="cross-list">
+                                <li>Data loss due to device failure, damage, or loss</li>
+                                <li>Data deletion by you or unauthorized users</li>
+                                <li>Data loss due to uninstalling the App</li>
+                                <li>Inability to recover deleted data</li>
+                            </ul>
+                            <div class="alert-box warning">
+                                <strong>BACK UP YOUR DEVICE REGULARLY</strong> if you want to preserve your data.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Section 8: Termination -->
+            <div class="section">
+                <div class="section-card">
+                    <div class="section-header">
+                        <div class="section-title">
+                            <span class="section-number">8</span>
+                            <h2>Termination</h2>
+                        </div>
+                        <span class="section-toggle">+</span>
+                    </div>
+                    <div class="section-body">
+                        <div class="section-content">
+                            <h3>8.1 Termination by You</h3>
+                            <p>You may stop using the App at any time by:</p>
+                            <ul class="check-list">
+                                <li>Uninstalling the App from your device</li>
+                                <li>Deleting all data within the App</li>
+                            </ul>
+
+                            <h3>8.2 Termination by Us</h3>
+                            <p>We may terminate or suspend your access to the App at any time, without notice, if:</p>
+                            <ul>
+                                <li>You violate these Terms</li>
+                                <li>You engage in illegal or harmful activities</li>
+                                <li>We discontinue the App</li>
+                            </ul>
+
+                            <h3>8.3 Effect of Termination</h3>
+                            <p>Upon termination:</p>
+                            <ul>
+                                <li>Your license to use the App ends immediately</li>
+                                <li>You must uninstall the App from your device</li>
+                                <li>All data remains on your device until you delete it</li>
+                                <li>Sections of these Terms that should survive termination will remain in effect</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Section 9: Platform Terms -->
+            <div class="section">
+                <div class="section-card">
+                    <div class="section-header">
+                        <div class="section-title">
+                            <span class="section-number">9</span>
+                            <h2>Platform-Specific Terms</h2>
+                        </div>
+                        <span class="section-toggle">+</span>
+                    </div>
+                    <div class="section-body">
+                        <div class="section-content">
+                            <h3>9.1 Apple App Store (iOS)</h3>
+                            <p>If you downloaded the App from the Apple App Store:</p>
+                            <ul>
+                                <li>These Terms are between you and us, not Apple</li>
+                                <li>Apple has no obligation to provide support or maintenance</li>
+                                <li>Apple is not liable for any claims related to the App</li>
+                                <li>Apple is a third-party beneficiary of these Terms</li>
+                                <li>You must comply with Apple's App Store Terms of Service</li>
+                            </ul>
+
+                            <h3>9.2 Google Play Store (Android)</h3>
+                            <p>If you downloaded the App from Google Play Store:</p>
+                            <ul>
+                                <li>These Terms are between you and us, not Google</li>
+                                <li>Google has no obligation to provide support or maintenance</li>
+                                <li>Google is not liable for any claims related to the App</li>
+                                <li>You must comply with Google Play's Terms of Service</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Section 10: Miscellaneous -->
+            <div class="section">
+                <div class="section-card">
+                    <div class="section-header">
+                        <div class="section-title">
+                            <span class="section-number">10</span>
+                            <h2>Miscellaneous Provisions</h2>
+                        </div>
+                        <span class="section-toggle">+</span>
+                    </div>
+                    <div class="section-body">
+                        <div class="section-content">
+                            <h3>10.1 Entire Agreement</h3>
+                            <p>These Terms, together with our Privacy Policy, constitute the entire agreement between you and us regarding the App and supersede all prior agreements.</p>
+
+                            <h3>10.2 Severability</h3>
+                            <p>If any provision of these Terms is found to be invalid or unenforceable, the remaining provisions will remain in full force and effect.</p>
+
+                            <h3>10.3 Governing Law</h3>
+                            <p>These Terms are governed by applicable law. Any disputes will be resolved through informal resolution first, and if needed, through appropriate legal channels.</p>
+
+                            <h3>10.4 No Third-Party Beneficiaries</h3>
+                            <p>These Terms do not create any third-party beneficiary rights, except as expressly stated (e.g., Apple or Google as third-party beneficiaries).</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Section 11: Acknowledgment -->
+            <div class="section">
+                <div class="section-card">
+                    <div class="section-header">
+                        <div class="section-title">
+                            <span class="section-number">11</span>
+                            <h2>Acknowledgment</h2>
+                        </div>
+                        <span class="section-toggle">+</span>
+                    </div>
+                    <div class="section-body">
+                        <div class="section-content">
+                            <p>By downloading, installing, or using Junior Kickers Journey, you acknowledge that:</p>
+                            <ol>
+                                <li>You have read and understood these Terms</li>
+                                <li>You agree to be bound by these Terms</li>
+                                <li>You meet the eligibility requirements (18+ years old, parent/guardian)</li>
+                                <li>You have read and understood our Privacy Policy</li>
+                                <li>You understand that all data is stored locally on your device</li>
+                                <li>You accept responsibility for your data and device security</li>
+                                <li>You agree to use the App appropriately and lawfully</li>
+                            </ol>
+                            
+                            <div class="alert-box success">
+                                <p><strong>Thank you for using Junior Kickers Journey!</strong> We're honored to be part of your child's soccer development journey.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Contact Section -->
+        <section id="contact" class="contact-section">
+            <h2>Questions About These Terms?</h2>
+            <p>We're here to help clarify anything</p>
+            <a href="mailto:sjuniorkickers@gmail.com" class="contact-email">
+                <span>✉️</span>
+                <span>sjuniorkickers@gmail.com</span>
+            </a>
+            <p style="margin-top: 16px; font-size: 0.875rem; opacity: 0.8;">Response time: Within 48-72 hours</p>
         </section>
+    </main>
 
-        <hr>
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-meta">
+            <span>📱 iOS 15.1+ & Android 7.0+</span>
+            <span>📋 Version 1.1</span>
+            <span>📅 Effective: November 1, 2025</span>
+        </div>
+        <div class="footer-links">
+            <a href="index.html">Home</a>
+            <a href="privacy-policy.html">Privacy Policy</a>
+            <a href="support.html">Support</a>
+        </div>
+        <p class="footer-copyright">© 2025 Junior Kickers Journey. All rights reserved.</p>
+    </footer>
 
-        <section class="section">
-            <div class="summary-box">
-                <h2 style="margin-top: 0; color: #047857;">Summary of Key Points</h2>
+    <!-- Back to Top Button -->
+    <a href="#" class="back-to-top" id="backToTop" title="Back to top">↑</a>
+
+    <script>
+        // Accordion functionality
+        document.querySelectorAll('.section-header').forEach(header => {
+            header.addEventListener('click', () => {
+                const card = header.closest('.section-card');
+                const isOpen = card.classList.contains('open');
                 
-                <h3>✅ What You Can Do:</h3>
-                <ol>
-                    <li>Use the App for personal, non-commercial purposes</li>
-                    <li>Track your child's soccer activities</li>
-                    <li>Own and control all your data</li>
-                    <li>Uninstall the App at any time</li>
-                </ol>
+                // Toggle current card
+                card.classList.toggle('open', !isOpen);
+            });
+        });
 
-                <h3>❌ What You Cannot Do:</h3>
-                <ol>
-                    <li>Copy, modify, or redistribute the App</li>
-                    <li>Use the App for commercial purposes</li>
-                    <li>Violate laws or others' rights</li>
-                    <li>Expect professional advice or guarantees</li>
-                </ol>
+        // Back to top button
+        const backToTop = document.getElementById('backToTop');
+        
+        window.addEventListener('scroll', () => {
+            if (window.pageYOffset > 300) {
+                backToTop.classList.add('visible');
+            } else {
+                backToTop.classList.remove('visible');
+            }
+        });
 
-                <h3>⚠️ Important Reminders:</h3>
-                <ol>
-                    <li>All data is stored locally on your device</li>
-                    <li>We are not liable for data loss – back up your device</li>
-                    <li>The App does not provide professional advice</li>
-                    <li>You are responsible for your data and device security</li>
-                </ol>
-            </div>
-        </section>
+        // Smooth scroll for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    const offset = 80;
+                    const targetPosition = target.getBoundingClientRect().top + window.pageYOffset - offset;
+                    window.scrollTo({
+                        top: targetPosition,
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
 
-        <hr>
-
-        <section class="section">
-            <h2>Legal Information</h2>
-            <p><strong>App Name:</strong> Junior Kickers Journey</p>
-            <p><strong>Platform:</strong> iOS (15.1+) and Android (7.0+)</p>
-            <p><strong>Distribution:</strong> Apple App Store and Google Play Store</p>
-            <p><strong>Terms Version:</strong> 1.1</p>
-            <p><strong>Effective Date:</strong> November 1, 2025</p>
-            <p><strong>Last Updated:</strong> January 5, 2026</p>
-        </section>
-
-        <hr>
-
-        <section class="section">
-            <h2>Acknowledgment</h2>
-            <p>By downloading, installing, or using Junior Kickers Journey, you acknowledge that:</p>
-            <ol>
-                <li>You have read and understood these Terms</li>
-                <li>You agree to be bound by these Terms</li>
-                <li>You meet the eligibility requirements (18+ years old, parent/guardian)</li>
-                <li>You have read and understood our Privacy Policy</li>
-                <li>You understand that all data is stored locally on your device</li>
-                <li>You accept responsibility for your data and device security</li>
-                <li>You agree to use the App appropriately and lawfully</li>
-            </ol>
+        // Update active nav link on scroll
+        const sections = document.querySelectorAll('section[id], div[id]');
+        const navLinks = document.querySelectorAll('.nav-link');
+        
+        window.addEventListener('scroll', () => {
+            let current = '';
             
-            <p style="margin-top: 20px; font-style: italic;">Thank you for using Junior Kickers Journey! We're honored to be part of your child's soccer development journey.</p>
-        </section>
+            sections.forEach(section => {
+                const sectionTop = section.offsetTop;
+                if (pageYOffset >= sectionTop - 100) {
+                    current = section.getAttribute('id');
+                }
+            });
 
-        <footer>
-            <p><strong>Version:</strong> 1.1 | <strong>Effective Date:</strong> November 1, 2025 | <strong>Last Reviewed:</strong> January 5, 2026</p>
-            <p style="margin-top: 10px;">Next Review: November 1, 2026 (annually)</p>
-            <p style="margin-top: 20px; font-style: italic;">These Terms of Service are written to be clear and understandable. If you have any questions, please contact us.</p>
-            <p style="margin-top: 30px;"><a href="index.html" style="color: #059669;">Back to Home</a></p>
-        </footer>
-    </div>
-
-    <a href="#" class="back-to-top" title="Back to top">↑</a>
+            navLinks.forEach(link => {
+                link.classList.remove('active');
+                if (link.getAttribute('href') === '#' + current) {
+                    link.classList.add('active');
+                }
+            });
+        });
+    </script>
 </body>
 </html>
-
